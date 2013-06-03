@@ -46,7 +46,7 @@ em {
   font-style: italic; }
 
 html {
-  background: url(/static/img/experience_beyond_limit.jpg) no-repeat center center fixed;
+  background: url("/static/img/experience_beyond_limit.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -135,7 +135,7 @@ form {
   border-radius: 15px; }
 
 textarea {
-  background: url(/static/img/notepad_row.png) repeat;
+  background: url("/static/img//notepad_row.png") repeat;
   line-height: 25px;
   padding: 2px 10px;
   font-family: Georgia, Ubuntu, Tahoma, sans-serif;
@@ -471,7 +471,7 @@ img.full_width {
 
 #bulletin_board_background {
   content: "";
-  background: url(/static/img/bulletin_board_background.jpg);
+  background: url("/static/img/bulletin_board_background.jpg");
   opacity: .5;
   top: 0;
   left: 0;
