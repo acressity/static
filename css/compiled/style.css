@@ -63,7 +63,7 @@ body {
   background-color: rgba(230, 230, 255, 0.75); }
 
 p {
-  line-height: 1.4; }
+  line-height: 1.35; }
 
 a {
   color: #3A6BBE;
@@ -202,11 +202,6 @@ img.full_width {
 .thirds_item {
   min-height: 100px; }
 
-.thirds_item img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto; }
-
 .explorer_item {
   background-color: rgba(74, 123, 158, 0.3); }
 
@@ -280,15 +275,12 @@ img.full_width {
 .gallery_photo_item {
   min-height: 220px; }
 
-.thirds_item form {
-  float: right; }
-
 .photo_feature {
   text-align: center;
   background-color: rgba(200, 200, 200, 0.2); }
 
 .photo_feature img {
-  max-width: 90%;
+  max-width: 95%;
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -454,10 +446,11 @@ img.full_width {
   background-color: #AAA;
   opacity: 0.6; }
 
-#welcome {
+#welcome_quote {
   position: absolute;
-  top: 10px;
-  color: #F0FED2; }
+  top: 0px;
+  color: #F0FED2;
+  padding: 10px; }
 
 .latest_narrative {
   max-height: 200px;

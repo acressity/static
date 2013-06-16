@@ -27,7 +27,7 @@ body {
 }
 
 p {
-    line-height: 1.4;
+    line-height: 1.35;
 }
 
 a {
@@ -197,12 +197,6 @@ img.full_width {
     min-height: 100px;
 }
 
-.thirds_item img {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 $item_opacity: 0.3;
 
 .explorer_item {
@@ -303,13 +297,13 @@ $item_opacity: 0.3;
     position: relative;
 }
 
+.comment textarea {
+    
+}
+
 .gallery_photo_item {
     @extend .object_item;
     min-height: 220px;
-}
-
-.thirds_item form {
-    float: right;
 }
 
 .photo_feature {
@@ -318,7 +312,7 @@ $item_opacity: 0.3;
 }
 
 .photo_feature img {
-    max-width: 90%;
+    max-width: 95%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -529,10 +523,11 @@ $item_opacity: 0.3;
     opacity: 0.6;
 }
 
-#welcome {
+#welcome_quote {
     position: absolute;
-    top: 10px;
+    top: 0px;
     color: #F0FED2;
+    padding: 10px;
 }
 
 #featured_experience {
