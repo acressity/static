@@ -241,6 +241,12 @@ img.full_width {
   top: 0%;
   padding: 5px 5px 5px 0px; }
 
+.smaller_font {
+  font-size: smaller; }
+
+.x-small_font {
+  font-size: x-small; }
+
 #shelved_experiences {
   display: none; }
 
@@ -371,7 +377,7 @@ img.full_width {
   width: 50%; }
 
 .error, .errorlist {
-  color: #F00;
+  color: #B00;
   font-size: smaller; }
 
 #wrapper {
@@ -485,8 +491,13 @@ img.full_width {
   height: 100px; }
 
 .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+  padding: 5px;
+  margin: 10px;
   width: 250px;
-  min-height: 80px; }
+  min-height: 70px;
+  background-color: rgba(100, 100, 100, 0.2); }
+  .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input {
+    height: 1.6em; }
 
 #register_first_name {
   float: left; }
