@@ -583,15 +583,20 @@ $item_opacity: 0.3;
     height: 100px;
 }
 
-.register_input {
+.formatted_input {
     padding: 5px;
     margin: 10px;
-    width: 250px;
-    min-height: 70px;
     background-color: rgba(100, 100, 100, 0.2);
     input {
         height: 1.6em;
+        font-size: medium;
     }
+}
+
+.register_input {
+    @extend .formatted_input;
+    width: 250px;
+    min-height: 70px;
 }
 
 #register_first_name {
@@ -698,6 +703,7 @@ ul.dropdown ul li {
     float: none; 
     position: relative;
     right: 40px;
+    left: auto;
 }
                                       
 /* IE 6 & 7 Needs Inline Block */

@@ -490,14 +490,17 @@ img.full_width {
   width: 350px;
   height: 100px; }
 
-.register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   padding: 5px;
   margin: 10px;
-  width: 250px;
-  min-height: 70px;
   background-color: rgba(100, 100, 100, 0.2); }
-  .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input {
-    height: 1.6em; }
+  .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input {
+    height: 1.6em;
+    font-size: medium; }
+
+.register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+  width: 250px;
+  min-height: 70px; }
 
 #register_first_name {
   float: left; }
@@ -576,7 +579,8 @@ ul.dropdown ul li {
   border-bottom: 1px solid #ccc;
   float: none;
   position: relative;
-  right: 40px; }
+  right: 40px;
+  left: auto; }
 
 /* IE 6 & 7 Needs Inline Block */
 ul.dropdown ul li a {
