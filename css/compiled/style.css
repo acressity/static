@@ -78,6 +78,9 @@ ul {
 div {
   border-radius: 6px; }
 
+textarea {
+  border-radius: 6px; }
+
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -181,14 +184,14 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item {
+.object_item, .explorer_item, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
   border-left: 2px solid rgba(74, 123, 158, 0.2);
   border-radius: 0.3em;
   margin-bottom: 10px; }
-  .object_item:hover, .explorer_item:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover {
+  .object_item:hover, .explorer_item:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
     border-right: 2px solid rgba(74, 123, 158, 0.6);
     border-left: 2px solid rgba(74, 123, 158, 0.6); }
 
@@ -246,9 +249,6 @@ img.full_width {
 
 .x-small_font {
   font-size: x-small; }
-
-#shelved_experiences {
-  display: none; }
 
 .narrative_dash {
   min-height: 100px; }
@@ -499,7 +499,7 @@ img.full_width {
     font-size: medium; }
 
 .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
-  width: 250px;
+  width: 275px;
   min-height: 70px; }
 
 #register_first_name {

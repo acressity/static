@@ -45,6 +45,10 @@ div {
     border-radius: 6px;
 }
 
+textarea {
+    border-radius: 6px;
+}
+
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -261,10 +265,6 @@ $item_opacity: 0.3;
 
 .x-small_font {
     font-size: x-small;
-}
-
-#shelved_experiences {
-    display: none;
 }
 
 .narrative_dash {
@@ -584,6 +584,7 @@ $item_opacity: 0.3;
 }
 
 .formatted_input {
+    @extend .object_item;
     padding: 5px;
     margin: 10px;
     background-color: rgba(100, 100, 100, 0.2);
@@ -595,7 +596,7 @@ $item_opacity: 0.3;
 
 .register_input {
     @extend .formatted_input;
-    width: 250px;
+    width: 275px;
     min-height: 70px;
 }
 
