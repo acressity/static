@@ -32,8 +32,6 @@ $(document).ready(function() {
 	$("#messages").click(function() {
 	  $("#messages").fadeOut(1200);
 	});
-
-    alert('Blabla');
 });
 
 
