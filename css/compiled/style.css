@@ -354,7 +354,8 @@ img.full_width {
 /* div for options near top of pages (e.g. experience: view photos, upload photo */
 .option_list {
   overflow: hidden;
-  border-radius: 0px; }
+  background-color: rgba(50, 50, 50, 0.1);
+  padding: 5px; }
 
 .option_icon {
   float: left;
