@@ -184,14 +184,14 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .explorer_item, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
   border-left: 2px solid rgba(74, 123, 158, 0.2);
   border-radius: 0.3em;
   margin-bottom: 10px; }
-  .object_item:hover, .explorer_item:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
+  .object_item:hover, .explorer_item:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
     border-right: 2px solid rgba(74, 123, 158, 0.6);
     border-left: 2px solid rgba(74, 123, 158, 0.6); }
 
@@ -235,14 +235,14 @@ img.full_width {
 
 .left {
   position: relative;
-  width: 50%; }
+  width: 48%; }
 
 .right {
   position: absolute;
-  width: 50%;
+  width: 48%;
   left: 50%;
   top: 0%;
-  padding: 5px 5px 5px 0px; }
+  padding: 5px; }
 
 .smaller_font {
   font-size: smaller; }
@@ -281,15 +281,14 @@ img.full_width {
 .gallery_photo_item {
   min-height: 220px; }
 
-.photo_feature {
+.featured_photo {
   text-align: center;
-  background-color: rgba(200, 200, 200, 0.2); }
-
-.photo_feature img {
-  max-width: 95%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
+  background-color: rgba(200, 200, 200, 0.125); }
+  .featured_photo img {
+    max-width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
 .gallery_photo_container {
   position: relative;
@@ -353,9 +352,7 @@ img.full_width {
 
 /* div for options near top of pages (e.g. experience: view photos, upload photo */
 .option_list {
-  overflow: hidden;
-  background-color: rgba(50, 50, 50, 0.1);
-  padding: 5px; }
+  overflow: hidden; }
 
 .option_icon {
   float: left;

@@ -248,15 +248,15 @@ $item_opacity: 0.3;
 
 .left {
     position: relative;
-    width: 50%;
+    width: 48%;
 }
 
 .right {
     position: absolute;
-    width: 50%;
+    width: 48%;
     left: 50%;
     top: 0%;
-    padding: 5px 5px 5px 0px;
+    padding: 5px;
 }
 
 .smaller_font {
@@ -314,16 +314,15 @@ $item_opacity: 0.3;
     min-height: 220px;
 }
 
-.photo_feature {
+.featured_photo {
     text-align: center;
-    background-color: rgba(200, 200, 200, 0.2)
-}
-
-.photo_feature img {
-    max-width: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(200, 200, 200, 0.125);
+    img {
+        max-width: 95%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .gallery_photo_container {
@@ -406,9 +405,8 @@ $item_opacity: 0.3;
 
 /* div for options near top of pages (e.g. experience: view photos, upload photo */
 .option_list {
+    @extend .object_item;
     overflow: hidden;
-    background-color: rgba(50, 50, 50, 0.1);
-    padding: 5px;
 }
 
 .option_icon {
