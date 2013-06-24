@@ -247,16 +247,19 @@ $item_opacity: 0.3;
 }
 
 .left {
-    position: relative;
-    width: 48%;
+    float: left;
+    width: 47%;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(10, 10, 10, 0.1);
 }
 
 .right {
-    position: absolute;
-    width: 48%;
-    left: 50%;
-    top: 0%;
+    width: 47%;
+    float: right;
     padding: 5px;
+    margin: 5px;
+    // background-color: rgba(10, 10, 10, 0.1);
 }
 
 .smaller_font {
@@ -545,7 +548,7 @@ $item_opacity: 0.3;
 
 .latest_narrative {
     @extend .narrative_item;
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
     display: none;
 }
