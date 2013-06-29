@@ -223,22 +223,28 @@ $item_opacity: 0.3;
 }
 
 .note {
-    background: url($img_dir + "icons/tack-right-icon.png") no-repeat top right, url($img_dir + "icons/tack-left-icon.png") no-repeat top left;
-    padding-top: 30px;
+    background: url($img_dir + "icons/tack-right-icon.png") no-repeat top right, url($img_dir + "icons/tack-left-icon.png") no-repeat top left,  url($img_dir + "/notepad_row.png");
+    padding: 30px 10px 10px;
     min-height: 100px;
     margin-bottom: 10px;
+}
+
+.explorer_note {
+    @extend .explorer_item;
+    @extend .note;
+    border: 2px solid rgba(74, 123, 158, 1);
 }
 
 .experience_note {
     @extend .experience_item;
     @extend .note;
-    background-color: rgba(167, 95, 142, 1);
+    border: 2px solid rgba(167, 95, 142, 1);
 }
 
 .narrative_note {
     @extend .narrative_item;
     @extend .note;
-    background-color: rgba(54, 152, 60, 1);
+    border: 2px solid rgba(54, 152, 60, 1);
 }
 
 .experience_dash {

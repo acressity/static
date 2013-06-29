@@ -184,14 +184,14 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
   border-left: 2px solid rgba(74, 123, 158, 0.2);
   border-radius: 0.3em;
   margin-bottom: 10px; }
-  .object_item:hover, .explorer_item:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
+  .object_item:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
     border-right: 2px solid rgba(74, 123, 158, 0.6);
     border-left: 2px solid rgba(74, 123, 158, 0.6); }
 
@@ -205,7 +205,7 @@ img.full_width {
 .thirds_item {
   min-height: 100px; }
 
-.explorer_item {
+.explorer_item, .explorer_note {
   background-color: rgba(74, 123, 158, 0.3); }
 
 .experience_item, .experience_note, .experience_dash {
@@ -218,17 +218,20 @@ img.full_width {
   min-height: 100px;
   padding: 0px; }
 
-.note, .experience_note, .narrative_note {
-  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left;
-  padding-top: 30px;
+.note, .explorer_note, .experience_note, .narrative_note {
+  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png");
+  padding: 30px 10px 10px;
   min-height: 100px;
   margin-bottom: 10px; }
 
+.explorer_note {
+  border: 2px solid #4a7b9e; }
+
 .experience_note {
-  background-color: #a75f8e; }
+  border: 2px solid #a75f8e; }
 
 .narrative_note {
-  background-color: #36983c; }
+  border: 2px solid #36983c; }
 
 .experience_dash {
   position: relative; }
