@@ -54,7 +54,7 @@ html {
   width: 100%; }
 
 body {
-  font-family: Georgia, 'Arbutus Slab', 'Merriweather Sans', Ubuntu, Helvetica, serif;
+  font-family: 'Merriweather Sans', Ubuntu, Helvetica, serif;
   color: #222;
   height: 100%;
   font-size: 110%; }
@@ -63,7 +63,7 @@ body {
   background-color: rgba(230, 230, 255, 0.75); }
 
 p {
-  line-height: 1.35; }
+  line-height: 1.3; }
 
 a {
   color: #3A6BBE;
@@ -206,15 +206,15 @@ img.full_width {
   min-height: 100px; }
 
 .explorer_item, .explorer_note {
-  background-color: rgba(74, 123, 158, 0.3); }
+  background-color: rgba(74, 123, 138, 0.3); }
 
 .experience_item, .experience_note, .experience_dash {
-  background-color: rgba(167, 95, 142, 0.3);
+  background-color: rgba(127, 95, 142, 0.3);
   min-height: 100px;
   padding: 0px; }
 
 .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative {
-  background-color: rgba(54, 152, 60, 0.3);
+  background-color: rgba(54, 112, 60, 0.3);
   min-height: 100px;
   padding: 0px; }
 
