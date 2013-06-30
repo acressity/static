@@ -46,6 +46,8 @@ ul {
 
 div {
     border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
 }
 
 textarea {
@@ -154,7 +156,18 @@ img.full_width {
     clear: both;
 }
 
+.div_border {
+    -moz-box-shadow: 0 0 2px 1px #888;
+    -webkit-box-shadow: 0 0 2px 1px #888;
+    box-shadow: 0 0 2px 1px #888; 
+}
+
 #content {
+    @extend .div_border;
+    @extend .background_color;
+    position: relative;
+    float: left;
+    width: 70%;
     padding: 5px;
     & > div {
         padding: 5px;
@@ -162,7 +175,12 @@ img.full_width {
 }
 
 #right_content {
+    @extend .div_border;
+    @extend .background_color;
     padding: 5px;
+    position: fixed;
+    margin-left: 65%;
+    width: 25%;
     overflow-y: auto;
     max-height: 90%;
     div {
@@ -503,20 +521,6 @@ $item_opacity: 0.3;
     right: 15px;
 }
 
-#content {
-    @extend .background_color;
-    position: relative;
-    float: left;
-    width: 70%;
-}
-
-#right_content {
-    @extend .background_color;
-    position: fixed;
-    margin-left: 64%;
-    width: 25%;
-}
-
 #id_comment {
     width: 100%;
     height: 2em;
@@ -537,11 +541,15 @@ $item_opacity: 0.3;
     opacity: 0.6;
 }
 
+$welcome_quote_text_px: 1px;
+$welcome_quote_text_color: #BBB;
+
 #welcome_quote {
     position: absolute;
     top: 0px;
     color: $link_color;//#5986A7;//rgb(14, 62, 20);// (57, 35, 72);
     padding: 10px;
+    text-shadow: 0 0 $welcome_quote_text_px $welcome_quote_text_color, 0 0 $welcome_quote_text_px $welcome_quote_text_color, 0 0 $welcome_quote_text_px $welcome_quote_text_color;
 }
 
 #featured_experience {
