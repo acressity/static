@@ -279,7 +279,8 @@ img.full_width {
   display: none; }
 
 .narrative_detail {
-  min-height: 325px; }
+  min-height: 325px;
+  word-wrap: break-word; }
 
 .narrative_detail .images_right {
   float: right;

@@ -312,6 +312,7 @@ $item_opacity: 0.3;
 .narrative_detail {
     @extend .narrative_item;
     min-height: 325px;
+    word-wrap: break-word;
 }
 
 .narrative_detail .images_right {
@@ -319,7 +320,6 @@ $item_opacity: 0.3;
     width: 30%;
     text-align: center;
     padding: 5px;
-    // background-color: ;
     img {
         display: block;
         margin-left: auto;
