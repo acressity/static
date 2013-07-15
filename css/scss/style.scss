@@ -444,6 +444,7 @@ $item_opacity: 0.3;
 .option_list {
     @extend .object_item;
     overflow: hidden;
+    background-color: rgba(100, 100, 100, 0.3);
 }
 
 .option_icon {
@@ -570,7 +571,7 @@ $item_opacity: 0.3;
 #welcome_quote {
     position: absolute;
     top: 0px;
-    color: $link_color;
+    color: #D3CDD8; // Color from moon in here_and_there image's moon
     padding: 10px;
 }
 

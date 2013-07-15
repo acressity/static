@@ -378,7 +378,8 @@ img.full_width {
 
 /* div for options near top of pages (e.g. experience: view photos, upload photo */
 .option_list {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: rgba(100, 100, 100, 0.3); }
 
 .option_icon {
   padding-right: 7px; }
@@ -478,7 +479,7 @@ img.full_width {
 #welcome_quote {
   position: absolute;
   top: 0px;
-  color: #1a4b6e;
+  color: #D3CDD8;
   padding: 10px; }
 
 .latest_narrative {
