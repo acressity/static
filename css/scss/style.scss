@@ -444,7 +444,9 @@ $item_opacity: 0.3;
 .option_list {
     @extend .object_item;
     overflow: hidden;
-    background-color: rgba(100, 100, 100, 0.3);
+    background-color: rgba(150, 150, 150, 0.3);
+    display: table;
+    
 }
 
 .option_icon {

@@ -379,7 +379,8 @@ img.full_width {
 /* div for options near top of pages (e.g. experience: view photos, upload photo */
 .option_list {
   overflow: hidden;
-  background-color: rgba(100, 100, 100, 0.3); }
+  background-color: rgba(150, 150, 150, 0.3);
+  display: table; }
 
 .option_icon {
   padding-right: 7px; }
