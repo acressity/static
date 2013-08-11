@@ -272,6 +272,11 @@ $item_opacity: 0.3;
     position: relative;
 }
 
+.request_dash {
+    @extend .object_item;
+    background-color: rgba(50, 80, 150, 0.5);
+}
+
 .left {
     float: left;
     width: 47%;
@@ -492,6 +497,7 @@ $item_opacity: 0.3;
 
 #messages {
     @extend .shadow_border;
+    font-size: smaller;
     position: fixed;
     width: 100%;
     text-align: center;
