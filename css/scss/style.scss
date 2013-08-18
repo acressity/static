@@ -349,7 +349,11 @@ $item_opacity: 0.3;
 
 .gallery_photo_item {
     @extend .object_item;
-    min-height: 220px;
+    min-height: 290px;
+    &:after {
+        clear: both;
+        content: "";
+    }
 }
 
 .featured_photo {
@@ -456,6 +460,11 @@ $item_opacity: 0.3;
 
 .option_icon {
     padding-right: 7px; 
+}
+
+.toggle_div {
+    // div initially hidden from view, expanded with jQuery in html template
+    display: none;
 }
 
 /* div for the navigating of previous/next objects */

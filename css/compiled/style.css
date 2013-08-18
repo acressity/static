@@ -305,7 +305,10 @@ img.full_width {
   position: relative; }
 
 .gallery_photo_item {
-  min-height: 220px; }
+  min-height: 290px; }
+  .gallery_photo_item:after {
+    clear: both;
+    content: ""; }
 
 .featured_photo {
   text-align: center;
@@ -387,6 +390,9 @@ img.full_width {
 
 .option_icon {
   padding-right: 7px; }
+
+.toggle_div {
+  display: none; }
 
 /* div for the navigating of previous/next objects */
 .next_previous {
