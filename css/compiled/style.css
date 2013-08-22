@@ -135,7 +135,15 @@ input.invite-button {
   height: 24px; }
 
 form {
-  border-radius: 15px; }
+  border-radius: 10px;
+  border: 2px rgba(100, 100, 100, 0.1) solid;
+  background-color: rgba(230, 230, 255, 0.5);
+  padding: 3px; }
+  form.no_styling {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0; }
 
 textarea {
   background: url("/static/img//notepad_row.png") repeat;
@@ -305,10 +313,8 @@ img.full_width {
   position: relative; }
 
 .gallery_photo_item {
-  min-height: 290px; }
-  .gallery_photo_item:after {
-    clear: both;
-    content: ""; }
+  min-height: 290px;
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .featured_photo {
   text-align: center;
@@ -407,6 +413,11 @@ img.full_width {
 .clear_both {
   clear: both; }
 
+.help_text {
+  display: none;
+  font-size: smaller;
+  background-color: rgba(250, 250, 250, 0.15); }
+
 .half {
   width: 50%; }
 
@@ -490,8 +501,11 @@ img.full_width {
 #welcome_quote {
   position: absolute;
   top: 0px;
-  color: #D3CDD8;
   padding: 10px; }
+  #welcome_quote h1 {
+    color: #5986A7; }
+  #welcome_quote h2 {
+    color: #D3CDD8; }
 
 .latest_narrative {
   max-height: 250px;
@@ -544,7 +558,10 @@ img.full_width {
   float: left; }
 
 #register_email {
-  clear: both; }
+  float: left; }
+
+#register_trailname {
+  float: left; }
 
 #register_password1 {
   float: left; }

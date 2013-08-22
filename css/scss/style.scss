@@ -114,7 +114,16 @@ input.invite-button {
 }
 
 form {
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 2px rgba(100, 100, 100, 0.1) solid;
+    background-color: rgba(230, 230, 255, 0.5);
+    padding: 3px;
+    &.no_styling {
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 textarea {
@@ -350,10 +359,7 @@ $item_opacity: 0.3;
 .gallery_photo_item {
     @extend .object_item;
     min-height: 290px;
-    &:after {
-        clear: both;
-        content: "";
-    }
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .featured_photo {
@@ -484,6 +490,12 @@ $item_opacity: 0.3;
     clear: both;
 }
 
+.help_text {
+    display: none;
+    font-size: smaller;
+    background-color: rgba(250, 250, 250, 0.15);
+}
+
 .half {
     width: 50%;
 }
@@ -588,8 +600,13 @@ $item_opacity: 0.3;
 #welcome_quote {
     position: absolute;
     top: 0px;
-    color: #D3CDD8; // Color from moon in here_and_there image's moon
     padding: 10px;
+    h1 {
+        color: #5986A7;
+    }
+    h2 {
+        color: #D3CDD8; // Color from moon in here_and_there image's moon
+    }
 }
 
 #featured_experience {
@@ -666,11 +683,12 @@ $item_opacity: 0.3;
 
 #register_email {
     @extend .register_input;
-    clear: both;
+    float: left;
 }
 
 #register_trailname {
     @extend .register_input;
+    float: left;
 }
 
 #register_password1 {
