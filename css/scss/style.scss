@@ -44,13 +44,13 @@ ul {
 }
 
 div {
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 textarea {
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 button::-moz-focus-inner,
@@ -81,7 +81,7 @@ input[type="button"], input[type="submit"] {
     cursor: pointer;
 }
 
-input.larger {
+form.larger {
     font-size: larger;
 }
 
@@ -182,7 +182,7 @@ img.full_width {
     width: 70%;
     padding: 5px;
     & > div {
-        padding: 5px;
+        padding: 3px;
     }
 }
 
@@ -210,7 +210,7 @@ img.full_width {
     border-right: 2px solid rgba(74, 123, 158, 0.2);
     border-left: 2px solid rgba(74, 123, 158, 0.2);
     border-radius: 0.3em;
-    margin-bottom: 10px;
+    margin: 2px;
     &:hover {
         border-right: 2px solid rgba(74, 123, 158, 0.6);
         border-left: 2px solid rgba(74, 123, 158, 0.6);
@@ -240,15 +240,14 @@ $item_opacity: 0.3;
 .experience_item {
     @extend .object_item;
     background-color: rgba(127, 95, 142, $item_opacity);//rgba(72, 61, 65, $item_opacity);//
-    min-height: 100px;
-    padding: 0px;
+    // min-height: 100px;
 }
 
 .narrative_item {
     @extend .object_item;
     background-color: rgba(54, 112, 60, $item_opacity); //rgba(88, 98, 97, $item_opacity);
     min-height: 100px;
-    padding: 0px;
+    word-wrap: break-word;
 }
 
 .note {
@@ -326,7 +325,6 @@ $item_opacity: 0.3;
 .narrative_detail {
     @extend .narrative_item;
     min-height: 325px;
-    word-wrap: break-word;
 }
 
 .narrative_detail .images_right {
@@ -465,7 +463,8 @@ $item_opacity: 0.3;
 }
 
 .option_icon {
-    padding-right: 7px; 
+    padding-right: 7px;
+    width: 26px;
 }
 
 .toggle_div {
@@ -488,6 +487,10 @@ $item_opacity: 0.3;
 
 .clear_both {
     clear: both;
+}
+
+.position_relative {
+    position: relative;
 }
 
 .help_text {
@@ -546,11 +549,11 @@ $item_opacity: 0.3;
 }
 
 #top_bar_left {
-    max-width: 50%;
+    max-width: 75%;
 }
 
 #top_bar_right {
-    max-width: 50%;
+    max-width: 25%;
 }
 
 #top_bar_signup {
@@ -659,9 +662,13 @@ $item_opacity: 0.3;
     padding: 5px;
     margin: 10px;
     background-color: rgba(100, 100, 100, 0.2);
+    input, select {
+        min-height: 1.5em;
+        font-size: 1em;
+    }
     input {
-        height: 1.6em;
-        font-size: medium;
+        background-color: #EEE;
+        border-radius: 0.3em;
     }
 }
 
@@ -748,7 +755,7 @@ ul.dropdown li:last-child a {
 
 ul.dropdown li.hover,
 ul.dropdown li:hover { 
-    background: #F3D673; 
+    background: #DDD;
     color: black; 
     position: relative; 
 }

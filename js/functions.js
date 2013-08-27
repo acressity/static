@@ -9,18 +9,26 @@ function setUp(element){
 	}
 }
 
-function toggle_div(id){
+function toggle_div(element){
     // Toggles a div when called
-    var element = document.getElementById(id);
-    // For the expand/contract image to successfully
-    // change it's arrow direction, the icon must have
-    // id identical to div with "_toggle_icon" added
-    var icon_id = id + "_toggle_icon";
-    if (document.getElementById(icon_id)){
+    // div can be specified by either a string for id of div
+    // or passing an element (perhaps the next div in the DOM)
+    // Passing with element is STRONGLY recommended, as it allows specific reference and removes ambiguity
+    // May be prudent to pass id string in instances where there is no ambiguity; perhaps it's quicker?
+    if (typeof element == 'string' || element instanceof String){
+        // Following for backwards compatibility
+        var element = document.getElementById(element);
+        var icon_id = element.id + "_toggle_icon";
+        toggle_icon = document.getElementById(icon_id)
+    } else {
+        toggle_icon = element.previousElementSibling.firstElementChild.firstElementChild;
+    }
+
+    if (toggle_icon){
         if ($(element).css("display") == "none"){
-            $("#" + icon_id).attr("src", $("#" + icon_id).attr("src").replace("expand", "contract"));
+            $(toggle_icon).attr("src", $(toggle_icon).attr("src").replace("expand", "contract"));
         } else {
-            $("#" + icon_id).attr("src", $("#" + icon_id).attr("src").replace("contract", "expand"));
+            $(toggle_icon).attr("src", $(toggle_icon).attr("src").replace("contract", "expand"));
         }
     }
     $(element).toggle(300);
