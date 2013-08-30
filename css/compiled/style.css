@@ -190,8 +190,6 @@ img.full_width {
   float: left;
   width: 70%;
   padding: 5px; }
-  #content > div {
-    padding: 3px; }
 
 #right_content {
   padding: 5px;
@@ -545,14 +543,14 @@ img.full_width {
   margin: 10px;
   background-color: rgba(100, 100, 100, 0.2); }
   .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input, .formatted_input select, .register_input select, #register_first_name select, #register_last_name select, #register_email select, #register_trailname select, #register_password1 select, #register_password2 select {
-    min-height: 1.5em;
+    min-height: 1em;
     font-size: 1em; }
-  .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input {
-    background-color: #EEE;
+  .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input, .formatted_input textarea, .register_input textarea, #register_first_name textarea, #register_last_name textarea, #register_email textarea, #register_trailname textarea, #register_password1 textarea, #register_password2 textarea {
+    background-color: #F4DAFF;
     border-radius: 0.3em; }
 
 .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
-  width: 275px;
+  width: 350px;
   min-height: 70px; }
 
 #register_first_name {
