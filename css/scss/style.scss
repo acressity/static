@@ -17,8 +17,9 @@ html {
 }
 
 body {
-    font-family: 'Merriweather Sans', Ubuntu, Helvetica, serif;
-    color: #222; // For white text on dark background #EAEAEA;
+    /* 'Merriweather Sans' is currently my favorite, but working in so many environments without internet connection is inspiring my to return to Ubuntu momentarily...plus, it's so beautiful... */
+    font-family: Ubuntu, Helvetica, serif;
+    color: #222;
     height: 100%;
     font-size: 110%;
 }
@@ -29,6 +30,8 @@ p {
 }
 
 $link_color: #1A4B6E;
+
+$main_color: #F68026;//#FF7900;
 
 a {
     color: $link_color;
@@ -148,7 +151,7 @@ blockquote .author {
     font-style: italic;
 }
 
-form.full_width input[type="text"], textarea  {
+form.full_width input[type="text"], input[type="password"], textarea  {
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -165,7 +168,7 @@ img.full_width {
 }
 
 .background_color {
-    background-color: rgba(230, 230, 255, 0.75);
+    background-color: rgba(230, 230, 255, 0.92);
 }
 
 .shadow_border {
@@ -354,6 +357,10 @@ $item_opacity: 0.3;
     
 }
 
+.youtube {
+    padding: 5px;
+}
+
 .gallery_photo_item {
     @extend .object_item;
     min-height: 290px;
@@ -495,6 +502,10 @@ $item_opacity: 0.3;
     position: relative;
 }
 
+.hidden {
+    display: none;
+}
+
 .help_text {
     display: none;
     font-size: smaller;
@@ -545,7 +556,7 @@ $item_opacity: 0.3;
     top: 0px;
     left: 0px;
     width: 100%;
-    background: rgba(74, 123, 158, 0.9);
+    background-color: $main_color; // previously: rgba(74, 123, 158, 0.9);
     z-index: 2;
     border-radius: 0em;
 }
@@ -582,6 +593,10 @@ $item_opacity: 0.3;
     right: 15px;
 }
 
+.main_color {
+    background-color: $main_color;
+}
+
 #id_comment {
     width: 100%;
     height: 2em;
@@ -603,14 +618,9 @@ $item_opacity: 0.3;
 }
 
 #welcome_quote {
-    position: absolute;
-    top: 0px;
     padding: 10px;
-    h1 {
-        color: #5986A7;
-    }
     h2 {
-        color: #D3CDD8; // Color from moon in here_and_there image's moon
+        color: #5986A7;
     }
 }
 
@@ -733,7 +743,7 @@ ul.dropdown li {
     font-weight: bold; 
     float: left; 
     zoom: 1; 
-    background: rgba(74, 123, 158, .5); 
+    background: rgba(74, 123, 158, .1); 
 }
 
 ul.dropdown a:hover { 
@@ -780,16 +790,27 @@ ul.dropdown ul {
 ul.dropdown ul li { 
     font-weight: normal; 
     background: #f6f6f6; 
-    color: #F0FED2;
+    //color: #F0FED2;
     border-bottom: 1px solid #ccc; 
     float: none; 
     position: relative;
     right: 40px;
     left: auto;
 }
+
+// For login/logout dropdown element
+
+#top_bar_right ul.dropdown ul li {
+    right: 5em;
+}
+
+#top_bar_right #login_out ul.dropdown ul li {
+    right: 7em;
+    width: 175px;
+}
                                       
 /* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li a { 
+ul.dropdown ul li  { 
     border-right: none; 
     width: 100%; 
     display: inline-block; 

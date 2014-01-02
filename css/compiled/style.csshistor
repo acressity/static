@@ -165,7 +165,7 @@ blockquote .author {
   float: right;
   font-style: italic; }
 
-form.full_width input[type="text"], input[type="password"], textarea {
+form.full_width input[type="text"], textarea {
   width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -179,7 +179,7 @@ img.full_width {
   clear: both; }
 
 .background_color, #content, #right_content {
-  background-color: rgba(230, 230, 255, 0.92); }
+  background-color: rgba(230, 230, 255, 0.75); }
 
 .shadow_border, #content, #right_content, #messages, #top_bar {
   -moz-box-shadow: 0 0 2px 1px #888;
@@ -459,7 +459,7 @@ img.full_width {
   top: 0px;
   left: 0px;
   width: 100%;
-  background-color: #f68026;
+  background: rgba(74, 123, 158, 0.9);
   z-index: 2;
   border-radius: 0em; }
 
@@ -489,9 +489,6 @@ img.full_width {
   position: absolute;
   right: 15px; }
 
-.main_color {
-  background-color: #f68026; }
-
 #id_comment {
   width: 100%;
   height: 2em;
@@ -510,9 +507,13 @@ img.full_width {
   opacity: 0.6; }
 
 #welcome_quote {
+  position: absolute;
+  top: 0px;
   padding: 10px; }
-  #welcome_quote h2 {
+  #welcome_quote h1 {
     color: #5986A7; }
+  #welcome_quote h2 {
+    color: #D3CDD8; }
 
 .latest_narrative {
   max-height: 250px;
@@ -598,7 +599,7 @@ ul.dropdown li {
   font-weight: bold;
   float: left;
   zoom: 1;
-  background: rgba(74, 123, 158, 0.1); }
+  background: rgba(74, 123, 158, 0.5); }
 
 ul.dropdown a:hover {
   color: #000; }
@@ -637,21 +638,15 @@ ul.dropdown ul {
 ul.dropdown ul li {
   font-weight: normal;
   background: #f6f6f6;
+  color: #F0FED2;
   border-bottom: 1px solid #ccc;
   float: none;
   position: relative;
   right: 40px;
   left: auto; }
 
-#top_bar_right ul.dropdown ul li {
-  right: 5em; }
-
-#top_bar_right #login_out ul.dropdown ul li {
-  right: 7em;
-  width: 175px; }
-
 /* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li {
+ul.dropdown ul li a {
   border-right: none;
   width: 100%;
   display: inline-block; }

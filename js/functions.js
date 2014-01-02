@@ -9,6 +9,21 @@ function setUp(element){
 	}
 }
 
+function verify(message, element){
+    if (element){
+        message = message + "\n\n" + element.value;
+    }
+    if (!message){
+        message = 'Are you sure?';
+    }
+    if (confirm(message)){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 function toggle_div(element){
     // Toggles a div when called
     // div can be specified by either a string for id of div
@@ -46,10 +61,13 @@ $(document).ready(function() {
 // Validates the form for signing up
 function validateFirstExperience(form){
     experience = form.experience;
-    if (experience.value == experience.defaultValue || experience.value.length < 3){
-        alert("Begin by submitting a new experience in the box");
-        return false;
+    if (experience.value == experience.defaultValue || experience.value.length < 1){ // They don't want to start with an experience. Perfectly fine
+        //alert("Begin by submitting a new experience in the box");
+        experience.value = ""; // For the catching script
+        return true;
     } else {
+        // User wishes to create journey with an initial experience. Cool
+        //return verify('Add as an experience:', this.experience);
         return true;
     }
 }
