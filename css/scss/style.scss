@@ -374,9 +374,8 @@ $item_opacity: 0.3;
         display: inline-block;
         margin-left: auto;
         margin-right: auto;
-        padding: 10px;
         background-color: rgba(200, 200, 200, 0.3);
-        border-radius: 0.75em;
+        border-radius: 0.55em;
     }
 }
 
@@ -385,7 +384,7 @@ $item_opacity: 0.3;
     min-height: 250px;
 }
 
-.next_photo {
+.previous_photo {
     position: absolute;
     left: 0;
     top: 0;
@@ -397,7 +396,7 @@ $item_opacity: 0.3;
     }
 }
 
-.next_photo img {
+.previous_photo img {
     position: relative;
     top: 50%;
 }
@@ -415,7 +414,7 @@ $item_opacity: 0.3;
     max-width: 85%;
 }
 
-.previous_photo {
+.next_photo {
     position: absolute;
     right: 0;
     top: 0;
@@ -427,7 +426,7 @@ $item_opacity: 0.3;
     }
 }
 
-.previous_photo img {
+.next_photo img {
     position: relative;
     top: 50%;
 }

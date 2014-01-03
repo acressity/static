@@ -322,25 +322,24 @@ img.full_width {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
     background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 0.75em; }
+    border-radius: 0.55em; }
 
 .gallery_photo_container {
   position: relative;
   min-height: 250px; }
 
-.next_photo {
+.previous_photo {
   position: absolute;
   left: 0;
   top: 0;
   width: 5%;
   background-color: rgba(100, 100, 100, 0.2);
   height: 90%; }
-  .next_photo:hover {
+  .previous_photo:hover {
     background-color: rgba(100, 100, 100, 0.4); }
 
-.next_photo img {
+.previous_photo img {
   position: relative;
   top: 50%; }
 
@@ -355,17 +354,17 @@ img.full_width {
   position: relative;
   max-width: 85%; }
 
-.previous_photo {
+.next_photo {
   position: absolute;
   right: 0;
   top: 0;
   width: 5%;
   height: 90%;
   background-color: rgba(100, 100, 100, 0.2); }
-  .previous_photo:hover {
+  .next_photo:hover {
     background-color: rgba(100, 100, 100, 0.4); }
 
-.previous_photo img {
+.next_photo img {
   position: relative;
   top: 50%; }
 
