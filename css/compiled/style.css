@@ -111,29 +111,22 @@ input[type="button"], input[type="submit"] {
 form.larger {
   font-size: larger; }
 
-input.expand-button {
-  background: #ededed url("/static/img/favicon.ico") no-repeat left;
-  background-size: 16px 16px;
+.icon_button, input.expand-button, input.edit-button, input.delete-button, input.invite-button {
+  background-size: 20px 20px;
   padding-left: 24px;
   height: 24px; }
+
+input.expand-button {
+  background: #ededed url("/static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
-  background: #ededed url("/static/img/icons/edit-icon.png") no-repeat top left;
-  background-size: 20px 20px;
-  padding-left: 24px;
-  height: 24px; }
+  background: #ededed url("/static/img/icons/edit-icon.png") no-repeat top left; }
 
 input.delete-button {
-  background: #ededed url("/static/img/icons/delete-icon.png") no-repeat top left;
-  background-size: 20px 20px;
-  padding-left: 24px;
-  height: 24px; }
+  background: #ededed url("/static/img/icons/delete-icon.png") no-repeat top left; }
 
 input.invite-button {
-  background: #ededed url("/static/img/icons/invite-icon.png") no-repeat top left;
-  background-size: 20px 20px;
-  padding-left: 24px;
-  height: 24px; }
+  background: #ededed url("/static/img/icons/invite-icon.png") no-repeat top left; }
 
 form {
   border-radius: 10px;
@@ -205,14 +198,14 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .notifications .notice, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
   border-left: 2px solid rgba(74, 123, 158, 0.2);
   border-radius: 0.3em;
   margin: 2px; }
-  .object_item:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .request_dash:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
+  .object_item:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .request_dash:hover, .gallery_photo_item:hover, .option_list:hover, .notifications .notice:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
     border-right: 2px solid rgba(74, 123, 158, 0.6);
     border-left: 2px solid rgba(74, 123, 158, 0.6); }
 
@@ -237,8 +230,10 @@ img.full_width {
   min-height: 100px;
   word-wrap: break-word; }
 
-.note, .explorer_note, .experience_note, .narrative_note {
-  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png");
+.post_it, .note, .explorer_note, .experience_note, .narrative_note, .notifications .notice {
+  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png"); }
+
+.note, .explorer_note, .experience_note, .narrative_note, .notifications .notice {
   padding: 30px 10px 10px;
   min-height: 100px;
   margin-bottom: 10px; }
@@ -486,7 +481,7 @@ img.full_width {
 
 #login_out {
   position: absolute;
-  right: 15px; }
+  right: 20px; }
 
 .main_color {
   background-color: #f68026; }
@@ -533,6 +528,9 @@ img.full_width {
   right: 0;
   position: absolute;
   z-index: -1; }
+
+.notifications .notice {
+  border: 2px solid #f68026; }
 
 #new_narrative_form {
   display: none; }
@@ -642,12 +640,8 @@ ul.dropdown ul li {
   right: 40px;
   left: auto; }
 
-#top_bar_right ul.dropdown ul li {
-  right: 5em; }
-
 #top_bar_right #login_out ul.dropdown ul li {
-  right: 7em;
-  width: 175px; }
+  right: 9em; }
 
 /* IE 6 & 7 Needs Inline Block */
 ul.dropdown ul li {

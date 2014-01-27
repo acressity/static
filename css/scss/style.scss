@@ -88,32 +88,30 @@ form.larger {
     font-size: larger;
 }
 
-input.expand-button {
-    background: #ededed url($img_dir + "favicon.ico") no-repeat left;
-    background-size: 16px 16px; 
+.icon_button {
+    background-size: 20px 20px; 
     padding-left: 24px;
     height: 24px;
+}
+
+input.expand-button {
+    @extend .icon_button;
+    background: #ededed url($img_dir + "favicon.ico") no-repeat left;
 }
 
 input.edit-button {
+    @extend .icon_button;
     background: #ededed url($img_dir + "icons/edit-icon.png") no-repeat top left;
-    background-size: 20px 20px; 
-    padding-left: 24px;
-    height: 24px;
 }
 
 input.delete-button {
+    @extend .icon_button;
     background: #ededed url($img_dir + "icons/delete-icon.png") no-repeat top left;
-    background-size: 20px 20px; 
-    padding-left: 24px;
-    height: 24px;
 }
 
 input.invite-button {
+    @extend .icon_button;
     background: #ededed url($img_dir + "icons/invite-icon.png") no-repeat top left;
-    background-size: 20px 20px; 
-    padding-left: 24px;
-    height: 24px;
 }
 
 form {
@@ -253,8 +251,12 @@ $item_opacity: 0.3;
     word-wrap: break-word;
 }
 
-.note {
+.post_it {
     background: url($img_dir + "icons/tack-right-icon.png") no-repeat top right, url($img_dir + "icons/tack-left-icon.png") no-repeat top left,  url($img_dir + "/notepad_row.png");
+}
+
+.note {
+    @extend .post_it;
     padding: 30px 10px 10px;
     min-height: 100px;
     margin-bottom: 10px;
@@ -589,7 +591,7 @@ $item_opacity: 0.3;
 
 #login_out {
     position: absolute;
-    right: 15px;
+    right: 20px;
 }
 
 .main_color {
@@ -652,6 +654,14 @@ $item_opacity: 0.3;
     right: 0;
     position: absolute;
     z-index: -1;
+}
+
+.notifications {
+    .notice {
+        @extend .object_item;
+        @extend .note;
+        border: 2px solid $main_color;
+    }
 }
 
 #new_narrative_form {
@@ -799,13 +809,14 @@ ul.dropdown ul li {
 
 // For login/logout dropdown element
 
-#top_bar_right ul.dropdown ul li {
-    right: 5em;
-}
+// #top_bar_right ul.dropdown ul li {
+//     right: 10em;
+// }
 
 #top_bar_right #login_out ul.dropdown ul li {
-    right: 7em;
-    width: 175px;
+    right: 9em;
+    //position: relative;
+    //width: 175px;
 }
                                       
 /* IE 6 & 7 Needs Inline Block */
