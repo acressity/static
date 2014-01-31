@@ -149,7 +149,7 @@ blockquote .author {
     font-style: italic;
 }
 
-form.full_width input[type="text"], input[type="password"], textarea  {
+form.full_width input[type="text"] input[type="password"] textarea  {
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -577,10 +577,13 @@ $item_opacity: 0.3;
 
 #top_bar_left {
     max-width: 75%;
+    float: left;
 }
 
 #top_bar_right {
     max-width: 25%;
+    position: absolute;
+    right:100px;
 }
 
 #top_bar_signup {
@@ -602,10 +605,10 @@ $item_opacity: 0.3;
     bottom: 1px;
 }
 
-#login_out {
-    position: absolute;
-    right: 20px;
-}
+// #login_out {
+//     position: relative;
+//     right: 20px;
+// }
 
 .main_color {
     background-color: $main_color;
@@ -655,6 +658,7 @@ $item_opacity: 0.3;
     position: relative;
     display: block;
     z-index: 1;
+    padding: 5px;
 }
 
 #bulletin_board_background {
@@ -750,91 +754,72 @@ $item_opacity: 0.3;
     display: none;
 }
 
-
-/* 
-    LEVEL ONE
-*/
-ul.dropdown {
-    z-index: 1;
-    right: 150px;
-    margin: 0;
-    padding: 0;
+.my_nav ul {
+    text-align: left;
+    display: inline;
+    margin-right: 15px;
+    padding: 5px 9px 6px 0;
+    list-style: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.my_nav ul li {
+  //font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -12px;
+  position: relative;
+  padding: 5px;
+  //background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+    a {
+        color: #000;
+    }
+}
+.my_nav ul li:hover {
+  background: rgb(74, 123, 138);
+  color: #fff;
+}
+.my_nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.my_nav ul li ul li { 
+  background: rgb(74, 123, 138); 
+  display: block; 
+  color: #fff;
+  padding: 10px;
+  width: 11em;
+  text-shadow: 0 -1px 0 #000;
+    a {
+        color: #FFF;
+    }
+}
+.my_nav ul li ul li:hover {
+    background: rgb(84, 133, 148);
 }
 
-ul.dropdown li {
-    font-weight: bold; 
-    float: left; 
-    zoom: 1; 
-    background: rgba(74, 123, 158, .1); 
-}
-
-ul.dropdown a:hover { 
-    color: #000; 
-}
-
-ul.dropdown a:active { 
-    color: #ffa500; 
-}
-
-ul.dropdown li a { 
-    display: block; 
-    padding: 4px 8px; 
-    border-right: 1px solid #333;
-    color: #222; 
-}
-
-ul.dropdown li:last-child a { 
-    border-right: none; 
-} /* Doesn't work in IE */
-
-ul.dropdown li.hover,
-ul.dropdown li:hover { 
-    background: rgba(74, 123, 138, 1); //#DDD;
-    color: black; 
-    position: relative; 
-}
-
-ul.dropdown li.hover a { 
-    color: black; 
-}
-
-
-/* 
-    LEVEL TWO
-*/
-ul.dropdown ul { 
-    width: 200px; 
-    visibility: hidden; 
-    position: absolute; 
-    top: 100%;
-}
-
-ul.dropdown ul li { 
-    font-weight: normal; 
-    background: #f6f6f6; 
-    //color: #F0FED2;
-    border-bottom: 1px solid #ccc; 
-    float: none; 
-    position: relative;
-    right: 40px;
-    left: auto;
-}
-
-// For login/logout dropdown element
-
-// #top_bar_right ul.dropdown ul li {
-//     right: 10em;
-// }
-
-#top_bar_right #login_out ul.dropdown ul li {
-    right: 9em;
-    //position: relative;
-    //width: 175px;
-}
-                                      
-/* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li  { 
-    border-right: none; 
-    width: 100%; 
-    display: inline-block; 
+.my_nav ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
