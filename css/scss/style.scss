@@ -513,6 +513,19 @@ $item_opacity: 0.3;
     background-color: rgba(250, 250, 250, 0.15);
 }
 
+.pagination {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 30%;
+    background-color: rgba(74, 123, 138, $item_opacity);
+    height: 50px;
+    line-height: 50px;
+    img {
+        vertical-align: middle;
+    }
+}
+
 .half {
     width: 50%;
 }
@@ -776,7 +789,7 @@ ul.dropdown li:last-child a {
 
 ul.dropdown li.hover,
 ul.dropdown li:hover { 
-    background: #DDD;
+    background: rgba(74, 123, 138, 1); //#DDD;
     color: black; 
     position: relative; 
 }
@@ -824,4 +837,4 @@ ul.dropdown ul li  {
     border-right: none; 
     width: 100%; 
     display: inline-block; 
-} 
+}

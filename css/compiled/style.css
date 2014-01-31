@@ -420,6 +420,17 @@ img.full_width {
   font-size: smaller;
   background-color: rgba(250, 250, 250, 0.15); }
 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 30%;
+  background-color: rgba(74, 123, 138, 0.3);
+  height: 50px;
+  line-height: 50px; }
+  .pagination img {
+    vertical-align: middle; }
+
 .half {
   width: 50%; }
 
@@ -615,7 +626,7 @@ ul.dropdown li:last-child a {
 /* Doesn't work in IE */
 ul.dropdown li.hover,
 ul.dropdown li:hover {
-  background: #DDD;
+  background: #4a7b8a;
   color: black;
   position: relative; }
 
