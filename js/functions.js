@@ -36,7 +36,7 @@ function toggle_div(element){
         var icon_id = element.id + "_toggle_icon";
         toggle_icon = document.getElementById(icon_id)
     } else {
-        toggle_icon = element.previousElementSibling.firstElementChild.firstElementChild;
+        toggle_icon = element.previousElementSibling.firstElementChild;
     }
 
     if (toggle_icon){
