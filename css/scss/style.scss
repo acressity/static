@@ -21,17 +21,17 @@ body {
     font-family: Ubuntu, Helvetica, serif;
     color: #222;
     height: 100%;
-    font-size: 110%;
+    font-size: 115%;
 }
 
 p {
-    line-height: 125%;
+    //line-height: 125%;
     margin: 15px 5px;
 }
 
 $link_color: #1A4B6E;
 
-$main_color: #F68026;//#FF7900;
+$main_color: #F68026; //#FF7900;
 
 a {
     color: $link_color;
@@ -40,6 +40,10 @@ a {
     &:hover {
         color: #595;
     }
+}
+
+hr {
+    //border: 2px solid;
 }
 
 ul { 
@@ -89,7 +93,7 @@ form.larger {
 }
 
 .icon_button {
-    background-size: 20px 20px; 
+    background-size: 20px; 
     padding-left: 24px;
     height: 24px;
 }
@@ -101,17 +105,18 @@ input.expand-button {
 
 input.edit-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/edit-icon.png") no-repeat top left;
+    background: #ededed url($img_dir + "icons/edit-icon.png") no-repeat left;
 }
 
 input.delete-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/delete-icon.png") no-repeat top left;
+    background: #ededed url($img_dir + "icons/delete-icon.png") no-repeat left;
+    background-size: 20px; /* For some reason this isn't being inherited from parent class... */
 }
 
 input.invite-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/invite-icon.png") no-repeat top left;
+    background: #ededed url($img_dir + "icons/invite-icon.png") no-repeat left;
 }
 
 form {
@@ -212,10 +217,10 @@ img.full_width {
     border-left: 2px solid rgba(74, 123, 158, 0.2);
     border-radius: 0.3em;
     margin: 2px;
-    &:hover {
+    /*&:hover {
         border-right: 2px solid rgba(74, 123, 158, 0.6);
         border-left: 2px solid rgba(74, 123, 158, 0.6);
-    }
+    }*/
 }
 
 .thirds_table {
@@ -227,8 +232,8 @@ img.full_width {
     width: 33%;
 }
 
-.thirds_item {
-    min-height: 100px;
+.thirds_table td > div {
+    min-height: 300px;
 }
 
 $item_opacity: 0.3;
@@ -265,19 +270,19 @@ $item_opacity: 0.3;
 .explorer_note {
     @extend .explorer_item;
     @extend .note;
-    border: 2px solid rgba(74, 123, 158, 1);
+    // border: 2px solid rgba(74, 123, 158, 1);
 }
 
 .experience_note {
     @extend .experience_item;
     @extend .note;
-    border: 2px solid rgba(167, 95, 142, 1);
+    // border: 2px solid rgba(167, 95, 142, 1);
 }
 
 .narrative_note {
     @extend .narrative_item;
     @extend .note;
-    border: 2px solid rgba(54, 152, 60, 1);
+    // border: 2px solid rgba(54, 152, 60, 1);
 }
 
 .experience_dash {
@@ -361,6 +366,23 @@ $item_opacity: 0.3;
 
 .youtube {
     padding: 5px;
+}
+
+#photo_form {
+    width: 50%;
+}
+
+#photo_form_feedback {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.uploaded_photo {
+    margin: 5px;
+    float: left;
+    width: 100px;
 }
 
 .gallery_photo_item {
@@ -475,6 +497,12 @@ $item_opacity: 0.3;
 .option_icon {
     padding-right: 7px;
     width: 26px;
+    margin: 1px;
+    &:hover {
+        width: 28px;
+        position:relative;
+        margin: 0px; // hacky, but I kinda like it and it works wonderfully
+    }
 }
 
 .toggle_div {
@@ -592,11 +620,11 @@ $item_opacity: 0.3;
 }
 
 #logo {
-    padding: 0px 40px;
+    padding: 0px 30px;
     position: relative;
     float: left;
     color: #000;
-    top: 3px;
+    top: 8px;
 }
 
 #logo em {
@@ -675,9 +703,9 @@ $item_opacity: 0.3;
 
 .notifications {
     .notice {
-        @extend .object_item;
+        //@extend .object_item;
         @extend .note;
-        border: 2px solid $main_color;
+        //border: 2px solid $main_color;
     }
 }
 

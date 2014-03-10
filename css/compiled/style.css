@@ -58,10 +58,9 @@ body {
   font-family: Ubuntu, Helvetica, serif;
   color: #222;
   height: 100%;
-  font-size: 110%; }
+  font-size: 115%; }
 
 p {
-  line-height: 125%;
   margin: 15px 5px; }
 
 a {
@@ -112,7 +111,7 @@ form.larger {
   font-size: larger; }
 
 .icon_button, input.expand-button, input.edit-button, input.delete-button, input.invite-button {
-  background-size: 20px 20px;
+  background-size: 20px;
   padding-left: 24px;
   height: 24px; }
 
@@ -120,13 +119,15 @@ input.expand-button {
   background: #ededed url("/static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
-  background: #ededed url("/static/img/icons/edit-icon.png") no-repeat top left; }
+  background: #ededed url("/static/img/icons/edit-icon.png") no-repeat left; }
 
 input.delete-button {
-  background: #ededed url("/static/img/icons/delete-icon.png") no-repeat top left; }
+  background: #ededed url("/static/img/icons/delete-icon.png") no-repeat left;
+  background-size: 20px;
+  /* For some reason this isn't being inherited from parent class... */ }
 
 input.invite-button {
-  background: #ededed url("/static/img/icons/invite-icon.png") no-repeat top left; }
+  background: #ededed url("/static/img/icons/invite-icon.png") no-repeat left; }
 
 form {
   border-radius: 10px;
@@ -198,16 +199,17 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .notifications .notice, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
   border-left: 2px solid rgba(74, 123, 158, 0.2);
   border-radius: 0.3em;
-  margin: 2px; }
-  .object_item:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .request_dash:hover, .gallery_photo_item:hover, .option_list:hover, .notifications .notice:hover, .formatted_input:hover, .register_input:hover, #register_first_name:hover, #register_last_name:hover, #register_email:hover, #register_trailname:hover, #register_password1:hover, #register_password2:hover {
-    border-right: 2px solid rgba(74, 123, 158, 0.6);
-    border-left: 2px solid rgba(74, 123, 158, 0.6); }
+  margin: 2px;
+  /*&:hover {
+      border-right: 2px solid rgba(74, 123, 158, 0.6);
+      border-left: 2px solid rgba(74, 123, 158, 0.6);
+  }*/ }
 
 .thirds_table {
   width: 100%; }
@@ -216,8 +218,8 @@ img.full_width {
   vertical-align: top;
   width: 33%; }
 
-.thirds_item {
-  min-height: 100px; }
+.thirds_table td > div {
+  min-height: 300px; }
 
 .explorer_item, .explorer_note {
   background-color: rgba(74, 123, 138, 0.3); }
@@ -237,15 +239,6 @@ img.full_width {
   padding: 30px 10px 10px;
   min-height: 100px;
   margin-bottom: 10px; }
-
-.explorer_note {
-  border: 2px solid #4a7b9e; }
-
-.experience_note {
-  border: 2px solid #a75f8e; }
-
-.narrative_note {
-  border: 2px solid #36983c; }
 
 .experience_dash {
   position: relative; }
@@ -305,6 +298,20 @@ img.full_width {
 
 .youtube {
   padding: 5px; }
+
+#photo_form {
+  width: 50%; }
+
+#photo_form_feedback {
+  width: 40%;
+  position: absolute;
+  right: 0px;
+  top: 0px; }
+
+.uploaded_photo {
+  margin: 5px;
+  float: left;
+  width: 100px; }
 
 .gallery_photo_item {
   min-height: 290px;
@@ -391,7 +398,12 @@ img.full_width {
 
 .option_icon {
   padding-right: 7px;
-  width: 26px; }
+  width: 26px;
+  margin: 1px; }
+  .option_icon:hover {
+    width: 28px;
+    position: relative;
+    margin: 0px; }
 
 .toggle_div {
   display: none; }
@@ -482,11 +494,11 @@ img.full_width {
   top: 5px; }
 
 #logo {
-  padding: 0px 40px;
+  padding: 0px 30px;
   position: relative;
   float: left;
   color: #000;
-  top: 3px; }
+  top: 8px; }
 
 #logo em {
   font-size: small;
@@ -539,9 +551,6 @@ img.full_width {
   right: 0;
   position: absolute;
   z-index: -1; }
-
-.notifications .notice {
-  border: 2px solid #f68026; }
 
 #new_narrative_form {
   display: none; }

@@ -23,6 +23,49 @@ function verify(message, element){
     }
 }
 
+// To be completely honest, I really have no idea what the following is doing. I'll work on it someday.
+function setup_ajax(){
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        crossDomain: false, // obviates need for sameOrigin test
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type)) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+};
+
+function ajax_message(message){
+    var html = "<div id=\"messages\" onclick=\"fade(this)\">";
+    html += "<p>" + message + "</p>";
+    html += "<div id=\"messages_note\">";
+    html += "<em>Click to remove</em>";
+    html += "</div>";
+    html += "</div>";
+    $("#wrapper").prepend(html);
+}
+
 
 function toggle_div(element){
     // Toggles a div when called
@@ -36,7 +79,13 @@ function toggle_div(element){
         var icon_id = element.id + "_toggle_icon";
         toggle_icon = document.getElementById(icon_id)
     } else {
-        toggle_icon = element.previousElementSibling.firstElementChild;
+        if (document.contains(element.previousElementSibling)){
+            if (document.contains(element.previousElementSibling)){
+                toggle_icon = element.previousElementSibling.firstElementChild;
+            }
+        } else {
+            toggle_icon = null;
+        }
     }
 
     if (toggle_icon){
@@ -49,12 +98,26 @@ function toggle_div(element){
     $(element).toggle(300);
 }
 
-$(document).ready(function() {
+function fade(element){
+        $(element).fadeOut(1200);
+    }
+
+$(document).ready(function(){
 	// jQuery functions to be made available upon page load
 
 	$("#messages").click(function() {
-	  $("#messages").fadeOut(1200);
+	    fade($("#messages"));
 	});
+
+    
+
+    // $(".option_icon").hover( // This was seeming kinda cool, but leaving it for CSS transitions
+    //     function(){
+    //         $(this).css('width', '200px');
+    //     }, function(){
+    //         $(this).css('width', '28px');
+    //     }
+    // );
 });
 
 
