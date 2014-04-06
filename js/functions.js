@@ -1,7 +1,9 @@
 function setUp(element){
 	if (element.value == element.defaultValue){
 		element.value = "";
-	}
+	} else if (element.value == ''){
+        alert('yes');
+    }
 	element.onblur = function() {
 		if (element.value == ""){
 			element.value = element.defaultValue;
