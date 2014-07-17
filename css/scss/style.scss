@@ -154,7 +154,7 @@ blockquote .author {
     font-style: italic;
 }
 
-form.full_width input[type="text"] input[type="password"], textarea  {
+form.full_width input[type="text"], input[type="password"], textarea  {
     width: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -236,6 +236,19 @@ img.full_width {
     min-height: 300px;
 }
 
+.timeline {
+    @extend .narrative_item;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.timeline_item {
+    display: inline-block;
+    margin: 5px;
+    height: 100%;
+}
+
 $item_opacity: 0.3;
 
 .explorer_item {
@@ -254,6 +267,12 @@ $item_opacity: 0.3;
     background-color: rgba(54, 112, 60, $item_opacity); //rgba(88, 98, 97, $item_opacity);
     min-height: 100px;
     word-wrap: break-word;
+}
+
+.editable {
+    &:hover {
+        background: url($img_dir + "icons/edit-icon.png") no-repeat top right;
+    }
 }
 
 .post_it {

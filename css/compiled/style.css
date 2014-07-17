@@ -159,7 +159,7 @@ blockquote .author {
   float: right;
   font-style: italic; }
 
-form.full_width input[type="text"] input[type="password"], textarea {
+form.full_width input[type="text"], input[type="password"], textarea {
   width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -199,7 +199,7 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
@@ -221,16 +221,29 @@ img.full_width {
 .thirds_table td > div {
   min-height: 300px; }
 
+.timeline {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap; }
+
+.timeline_item {
+  display: inline-block;
+  margin: 5px;
+  height: 100%; }
+
 .explorer_item, .explorer_note {
   background-color: rgba(74, 123, 138, 0.3); }
 
 .experience_item, .experience_note, .experience_dash {
   background-color: rgba(127, 95, 142, 0.3); }
 
-.narrative_item, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative {
+.narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative {
   background-color: rgba(54, 112, 60, 0.3);
   min-height: 100px;
   word-wrap: break-word; }
+
+.editable:hover {
+  background: url("/static/img/icons/edit-icon.png") no-repeat top right; }
 
 .post_it, .note, .explorer_note, .experience_note, .narrative_note, .notifications .notice {
   background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png"); }
