@@ -199,7 +199,7 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0.2);
@@ -230,6 +230,9 @@ img.full_width {
   display: inline-block;
   margin: 5px;
   height: 100%; }
+
+.main_item, #main_index_header {
+  background-color: #f68026; }
 
 .explorer_item, .explorer_note {
   background-color: rgba(74, 123, 138, 0.3); }
@@ -338,7 +341,7 @@ img.full_width {
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 0.55em; }
+    border-radius: 0.45em; }
 
 .gallery_photo_container {
   position: relative;
@@ -407,16 +410,37 @@ img.full_width {
 .option_list {
   overflow: hidden;
   background-color: rgba(150, 150, 150, 0.3);
-  display: table; }
+  display: table;
+  font-size: small; }
+
+.option {
+  margin: 5px; }
+  .option img {
+    vertical-align: middle;
+    width: 20px;
+    margin: 1px; }
+  .option:hover img {
+    width: 22px;
+    position: relative;
+    margin: 0px; }
 
 .option_icon {
   padding-right: 7px;
-  width: 26px;
+  width: 20px;
   margin: 1px; }
   .option_icon:hover {
-    width: 28px;
+    width: 22px;
     position: relative;
     margin: 0px; }
+
+.toggler, .wide_toggler {
+  cursor: pointer; }
+
+.wide_toggler {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .toggle_div {
   display: none; }
@@ -462,6 +486,14 @@ img.full_width {
 .error, .errorlist {
   color: #B00;
   font-size: smaller; }
+
+.flipped {
+  transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -khtml-transform: scale(1, -1);
+  -ms-transform: scale(1, -1); }
 
 #wrapper {
   height: 100%;
@@ -518,6 +550,18 @@ img.full_width {
   position: relative;
   bottom: 1px; }
 
+#main_index_header img {
+  width: 200px;
+  border-radius: 0.4em; }
+#main_index_header h1 {
+  position: absolute;
+  top: 30px;
+  left: 33%; }
+#main_index_header h3 {
+  position: absolute;
+  top: 77px;
+  left: 33%; }
+
 .main_color {
   background-color: #f68026; }
 
@@ -539,7 +583,10 @@ img.full_width {
   opacity: 0.6; }
 
 #welcome_quote {
-  padding: 10px; }
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(127, 95, 142, 0.3);
+  margin-bottom: 0.5em; }
   #welcome_quote h2 {
     color: #5986A7; }
 
@@ -667,7 +714,7 @@ img.full_width {
     color: #fff;
     padding: 10px;
     width: 11em;
-    text-shadow: 0 -1px 0 black;
+    text-shadow: 0 -1px 0 #000;
     border-top: 1px #FFF solid; }
     .my_nav ul li ul li a {
       color: #FFF; }

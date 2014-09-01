@@ -111,6 +111,14 @@ $(document).ready(function(){
 	    fade($("#messages"));
 	});
 
+    $(".wide_toggler").click(function(){
+        if ($(this).hasClass("flipped")){
+            $(this).removeClass("flipped");
+        } else {
+            $(this).addClass("flipped");
+        }
+    });
+
     
 
     // $(".option_icon").hover( // This was seeming kinda cool, but leaving it for CSS transitions
