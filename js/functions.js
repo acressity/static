@@ -136,8 +136,9 @@ function validateFirstExperience(form){
     experience = form.experience;
     if (experience.value == experience.defaultValue || experience.value.length < 1){ // They don't want to start with an experience. Perfectly fine
         //alert("Begin by submitting a new experience in the box");
-        experience.value = ""; // For the catching script
-        return true;
+        // experience.value = ""; // For the catching script
+        window.location.href='/explorers/new_explorer';
+        return false;
     } else {
         // User wishes to create journey with an initial experience. Cool
         //return verify('Add as an experience:', this.experience);

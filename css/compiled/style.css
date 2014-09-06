@@ -50,15 +50,20 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  width: 100%; }
+  background-size: cover; }
 
 body {
   /* 'Merriweather Sans' is currently my favorite, but working in so many environments without internet connection is inspiring my to return to Ubuntu momentarily...plus, it's so beautiful... */
   font-family: Ubuntu, Helvetica, serif;
   color: #222;
-  height: 100%;
   font-size: 115%; }
+
+html, body, #wrapper {
+  height: 100%; }
+
+body > #wrapper {
+  height: auto;
+  min-height: 100%; }
 
 p {
   margin: 15px 5px; }
@@ -89,45 +94,75 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none; }
 
 input[type="button"], input[type="submit"] {
-  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
-  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
-  background-color: #ededed;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #dcdcdc;
+  -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f68026), color-stop(1, #fb9e25));
+  background: -moz-linear-gradient(center top, #f68026 5%, #fb9e25 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
+  background-color: #f68026;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+  text-indent: 0;
+  border: 1px solid #eeb44f;
   display: inline-block;
-  color: #1c2b68;
-  padding: 2px 24px;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px #ffffff;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
   font-weight: bold;
-  cursor: pointer; }
+  font-style: normal;
+  height: 27px;
+  line-height: 27px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0px #cc9f52; }
+  input[type="button"]:hover, input[type="submit"]:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026));
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+    background-color: #fb9e25; }
+  input[type="button"]:active, input[type="submit"]:active {
+    position: relative;
+    top: 1px; }
+
+#large_button {
+  width: 100%;
+  height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a4b6e; }
 
 form.larger {
   font-size: larger; }
 
 .icon_button, input.expand-button, input.edit-button, input.delete-button, input.invite-button {
   background-size: 20px;
-  padding-left: 24px;
-  height: 24px; }
+  padding-left: 24px; }
 
 input.expand-button {
-  background: #ededed url("/static/img/favicon.ico") no-repeat left; }
+  background: #f68026 url("/static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
-  background: #ededed url("/static/img/icons/edit-icon.png") no-repeat left; }
+  background: #f68026 url("/static/img/icons/edit-icon.png") no-repeat left; }
 
 input.delete-button {
-  background: #ededed url("/static/img/icons/delete-icon.png") no-repeat left;
+  background: #f68026 url("/static/img/icons/delete-icon.png") no-repeat left;
   background-size: 20px;
   /* For some reason this isn't being inherited from parent class... */ }
 
 input.invite-button {
-  background: #ededed url("/static/img/icons/invite-icon.png") no-repeat left; }
+  background: #f68026 url("/static/img/icons/invite-icon.png") no-repeat left; }
 
 form {
   border-radius: 10px;
@@ -307,6 +342,20 @@ img.full_width {
   position: relative;
   bottom: 0px;
   left: 0px; }
+
+.horizontal_list {
+  font-size: small;
+  height: 100%;
+  text-align: center; }
+  .horizontal_list li {
+    display: block;
+    width: 15%;
+    float: left;
+    padding: 5px; }
+  .horizontal_list a {
+    color: #FFF; }
+    .horizontal_list a:hover {
+      color: #1a4b6e; }
 
 .comment_list {
   font-size: smaller;
@@ -499,7 +548,8 @@ img.full_width {
   height: 100%;
   width: 90%;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  margin-bottom: 30px; }
 
 #messages {
   font-size: smaller;
@@ -551,16 +601,14 @@ img.full_width {
   bottom: 1px; }
 
 #main_index_header img {
-  width: 200px;
-  border-radius: 0.4em; }
-#main_index_header h1 {
+  width: 65px;
+  border-radius: 0.4em;
+  margin: 10px; }
+#main_index_header #text {
   position: absolute;
-  top: 30px;
-  left: 33%; }
-#main_index_header h3 {
-  position: absolute;
-  top: 77px;
-  left: 33%; }
+  top: 0px;
+  left: 150px;
+  height: 100%; }
 
 .main_color {
   background-color: #f68026; }
@@ -574,13 +622,13 @@ img.full_width {
   display: none; }
 
 #footer {
-  /*  margin-top: -50px;*/
+  margin-top: -30px;
   text-align: center;
   position: relative;
   clear: both;
-  height: 50px;
-  background-color: #AAA;
-  opacity: 0.6; }
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0; }
 
 #welcome_quote {
   padding: 10px;

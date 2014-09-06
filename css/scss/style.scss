@@ -13,16 +13,19 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 100%;
+    // width: 100%;
 }
 
 body {
     /* 'Merriweather Sans' is currently my favorite, but working in so many environments without internet connection is inspiring my to return to Ubuntu momentarily...plus, it's so beautiful... */
     font-family: Ubuntu, Helvetica, serif;
     color: #222;
-    height: 100%;
+    // height: 100%;
     font-size: 115%;
 }
+
+html, body, #wrapper { height: 100%; }
+body > #wrapper { height: auto; min-height: 100%; }
 
 p {
     //line-height: 125%;
@@ -68,24 +71,60 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     border: none;
 }
 
+$button_background: $main_color;
+
 input[type="button"], input[type="submit"] {
-    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background: -moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-    background-color: #ededed;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 1px solid #dcdcdc;
-    display: inline-block;
-    color: #1c2b68;
-    padding: 2px 24px;
-    text-decoration: none;
-    text-shadow: 1px 1px 0px #ffffff;
+    -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    box-shadow:inset 0px 1px 0px 0px #fce2c1;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $button_background), color-stop(1, #fb9e25) );
+    background:-moz-linear-gradient( center top, $button_background 5%, #fb9e25 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
+    background-color:$button_background;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    text-indent:0;
+    border:1px solid #eeb44f;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+    height:27px;
+    line-height:27px;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #cc9f52;
+    &:hover {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, $button_background) );
+        background:-moz-linear-gradient( center top, #fb9e25 5%, $button_background 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+        background-color:#fb9e25;
+    }
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+
+#large_button {
+    width:100%;
+    height:100px;
+    font-size:24px;
     font-weight: bold;
-    cursor: pointer;
+    color:$link_color;
 }
 
 form.larger {
@@ -95,28 +134,28 @@ form.larger {
 .icon_button {
     background-size: 20px; 
     padding-left: 24px;
-    height: 24px;
+    // height: 24px;
 }
 
 input.expand-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "favicon.ico") no-repeat left;
+    background: $button_background url($img_dir + "favicon.ico") no-repeat left;
 }
 
 input.edit-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/edit-icon.png") no-repeat left;
+    background: $button_background url($img_dir + "icons/edit-icon.png") no-repeat left;
 }
 
 input.delete-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/delete-icon.png") no-repeat left;
+    background: $button_background url($img_dir + "icons/delete-icon.png") no-repeat left;
     background-size: 20px; /* For some reason this isn't being inherited from parent class... */
 }
 
 input.invite-button {
     @extend .icon_button;
-    background: #ededed url($img_dir + "icons/invite-icon.png") no-repeat left;
+    background: $button_background url($img_dir + "icons/invite-icon.png") no-repeat left;
 }
 
 form {
@@ -376,6 +415,25 @@ $item_opacity: 0.3;
     left: 0px;
 }
 
+.horizontal_list {
+    font-size: small;
+    height: 100%;
+    text-align: center;
+    li {
+        display: block;
+        width: 15%;
+        float: left;
+        //margin: 10px;
+        padding:5px;
+    }
+    a {
+        color: #FFF;
+        &:hover {
+            color: $link_color;
+        }
+    }
+}
+
 .comment_list {
     font-size: smaller;
     position: relative;
@@ -632,6 +690,7 @@ $item_opacity: 0.3;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 30px;
 }
 
 #messages {
@@ -696,18 +755,16 @@ $item_opacity: 0.3;
 #main_index_header {
     @extend .main_item;
     img {
-        width: 200px;
+        width: 65px;
         border-radius:0.4em;
+        margin:10px;
+        // float: left;
     }
-    h1 {
+    #text {
         position: absolute;
-        top: 30px;
-        left: 33%;
-    }
-    h3 {
-        position: absolute;
-        top: 77px;
-        left: 33%;
+        top: 0px;
+        left: 150px;
+        height: 100%;
     }
 }
 
@@ -731,13 +788,13 @@ $item_opacity: 0.3;
 }
 
 #footer {
-/*  margin-top: -50px;*/
+    margin-top: -30px;
     text-align: center;
     position: relative;
     clear: both;
-    height: 50px;
-    background-color: #AAA;
-    opacity: 0.6;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0;
 }
 
 #welcome_quote {
