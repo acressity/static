@@ -318,11 +318,12 @@ $item_opacity: 0.3;
 
 .post_it {
     background: url($img_dir + "icons/tack-right-icon.png") no-repeat top right, url($img_dir + "icons/tack-left-icon.png") no-repeat top left,  url($img_dir + "/notepad_row.png");
+    padding: 25px;
 }
 
 .note {
     @extend .post_it;
-    padding: 30px 10px 10px;
+    // padding: 30px 10px 10px;
     min-height: 100px;
     margin-bottom: 10px;
 }
@@ -357,17 +358,17 @@ $item_opacity: 0.3;
 
 .left {
     float: left;
-    width: 47%;
-    margin: 5px;
-    padding: 5px;
+    width: 45%;
+    // margin: 5px;
+    // padding: 5px;
     background-color: rgba(10, 10, 10, 0.1);
 }
 
 .right {
-    width: 47%;
+    width: 45%;
     float: right;
-    padding: 5px;
-    margin: 5px;
+    // padding: 5px;
+    // margin: 5px;
     // background-color: rgba(10, 10, 10, 0.1);
 }
 

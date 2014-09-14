@@ -284,10 +284,10 @@ img.full_width {
   background: url("/static/img/icons/edit-icon.png") no-repeat top right; }
 
 .post_it, .note, .explorer_note, .experience_note, .narrative_note, .notifications .notice {
-  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png"); }
+  background: url("/static/img/icons/tack-right-icon.png") no-repeat top right, url("/static/img/icons/tack-left-icon.png") no-repeat top left, url("/static/img//notepad_row.png");
+  padding: 25px; }
 
 .note, .explorer_note, .experience_note, .narrative_note, .notifications .notice {
-  padding: 30px 10px 10px;
   min-height: 100px;
   margin-bottom: 10px; }
 
@@ -299,16 +299,12 @@ img.full_width {
 
 .left {
   float: left;
-  width: 47%;
-  margin: 5px;
-  padding: 5px;
+  width: 45%;
   background-color: rgba(10, 10, 10, 0.1); }
 
 .right {
-  width: 47%;
-  float: right;
-  padding: 5px;
-  margin: 5px; }
+  width: 45%;
+  float: right; }
 
 .align_center {
   text-align: center; }
