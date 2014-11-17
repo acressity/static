@@ -68,6 +68,9 @@ body > #wrapper {
 p {
   margin: 15px 5px; }
 
+pre {
+  font-family: Ubuntu, Helvetica, serif; }
+
 a {
   color: #1a4b6e;
   text-decoration: none;
@@ -345,7 +348,7 @@ img.full_width {
   text-align: center; }
   .horizontal_list li {
     display: block;
-    width: 15%;
+    width: 5%;
     float: left;
     padding: 5px; }
   .horizontal_list a {

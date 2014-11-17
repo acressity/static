@@ -32,6 +32,10 @@ p {
     margin: 15px 5px;
 }
 
+pre {
+    font-family: Ubuntu, Helvetica, serif;
+}
+
 $link_color: #1A4B6E;
 
 $main_color: #F68026; //#FF7900;
@@ -422,7 +426,7 @@ $item_opacity: 0.3;
     text-align: center;
     li {
         display: block;
-        width: 15%;
+        width: 5%;
         float: left;
         //margin: 10px;
         padding:5px;
