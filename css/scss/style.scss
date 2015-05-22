@@ -8,7 +8,7 @@
 $img_dir: "/static/img/";
 
 html {
-    background: url($img_dir + "AcressityBackground.jpg") no-repeat center center fixed; 
+    background: url($img_dir + "AcressityBackground.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -53,7 +53,7 @@ hr {
     //border: 2px solid;
 }
 
-ul { 
+ul {
     list-style: none;
 }
 
@@ -136,7 +136,7 @@ form.larger {
 }
 
 .icon_button {
-    background-size: 20px; 
+    background-size: 20px;
     padding-left: 24px;
     // height: 24px;
 }
@@ -220,13 +220,13 @@ img.full_width {
 .shadow_border {
     -moz-box-shadow: 0 0 2px 1px #888;
     -webkit-box-shadow: 0 0 2px 1px #888;
-    box-shadow: 0 0 2px 1px #888; 
+    box-shadow: 0 0 2px 1px #888;
 }
 
 .no_shadow_border {
     -moz-box-shadow: 0 0 0px 0px #888;
     -webkit-box-shadow: 0 0 0px 0px #888;
-    box-shadow: 0 0 0px 0px #888; 
+    box-shadow: 0 0 0px 0px #888;
 }
 
 #content {
@@ -455,7 +455,7 @@ $item_opacity: 0.3;
 }
 
 .comment textarea {
-    
+
 }
 
 .youtube {
@@ -786,7 +786,7 @@ $item_opacity: 0.3;
 #explore_button {
     width: 12em;
     height: 12em;
-    background-color: #7B6A8F;
+    background-color: rgba(127, 95, 142, 0.9);
     border-radius: 50%;
     position: absolute;
     // margin-left: auto;
@@ -796,7 +796,7 @@ $item_opacity: 0.3;
     text-align: center;
     vertical-align: middle;
     &:hover {
-        background-color: rgba(59, 164, 137, 0.55);
+        background-color: rgba(127, 95, 142, 0.5); // rgba(59, 164, 137, 0.55);
     }
 }
 #explore_button p {
@@ -891,7 +891,7 @@ $item_opacity: 0.3;
 }
 
 #id_caption {
-    width: 350px;
+    //width: 350px;
     height: 100px;
 }
 
@@ -1011,14 +1011,14 @@ $item_opacity: 0.3;
     -ms-transition: opacity 0.2s;
     -o-transition: opacity 0.2s;
     -transition: opacity 0.2s;
-    li { 
-        background: rgb(74, 123, 138); 
-        display: block; 
+    li {
+        background: rgb(74, 123, 138);
+        display: block;
         color: #fff;
         padding: 10px;
         width: 11em;
         text-shadow: 0 -1px 0 #000;
-        border-top: 1px #FFF solid; 
+        border-top: 1px #FFF solid;
         a {
             color: #FFF;
         }

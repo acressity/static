@@ -621,7 +621,7 @@ img.full_width {
 #explore_button {
   width: 12em;
   height: 12em;
-  background-color: #7B6A8F;
+  background-color: rgba(127, 95, 142, 0.9);
   border-radius: 50%;
   position: absolute;
   top: 150px;
@@ -629,7 +629,7 @@ img.full_width {
   text-align: center;
   vertical-align: middle; }
   #explore_button:hover {
-    background-color: rgba(59, 164, 137, 0.55); }
+    background-color: rgba(127, 95, 142, 0.5); }
 
 #explore_button p {
   position: relative;
@@ -692,7 +692,6 @@ img.full_width {
   display: none; }
 
 #id_caption {
-  width: 350px;
   height: 100px; }
 
 #id_description {
