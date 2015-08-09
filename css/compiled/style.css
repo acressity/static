@@ -53,10 +53,9 @@ html {
   background-size: cover; }
 
 body {
-  /* 'Merriweather Sans' is currently my favorite, but working in so many environments without internet connection is inspiring my to return to Ubuntu momentarily...plus, it's so beautiful... */
-  font-family: Ubuntu, Helvetica, serif;
+  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
   color: #222;
-  font-size: 115%; }
+  font-size: 107.5%; }
 
 html, body, #wrapper {
   height: 100%; }
@@ -67,9 +66,6 @@ body > #wrapper {
 
 p {
   margin: 15px 5px; }
-
-pre {
-  font-family: Ubuntu, Helvetica, serif; }
 
 a {
   color: #1a4b6e;
@@ -101,7 +97,6 @@ input[type="button"], input[type="submit"] {
   -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
   box-shadow: inset 0px 1px 0px 0px #fce2c1;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f68026), color-stop(1, #fb9e25));
-  background: -moz-linear-gradient(center top, #f68026 5%, #fb9e25 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
   background-color: #f68026;
   -webkit-border-top-left-radius: 6px;
@@ -120,13 +115,12 @@ input[type="button"], input[type="submit"] {
   border: 1px solid #eeb44f;
   display: inline-block;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 14px;
-  font-weight: bold;
+  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
+  font-size: 16px;
   font-style: normal;
-  height: 27px;
+  height: 30px;
   line-height: 27px;
-  width: 100px;
+  width: 200px;
   text-decoration: none;
   text-align: center;
   text-shadow: 1px 1px 0px #cc9f52; }
@@ -146,26 +140,45 @@ input[type="button"], input[type="submit"] {
   font-weight: bold;
   color: #1a4b6e; }
 
-form.larger {
+.larger {
   font-size: larger; }
 
 .icon_button, input.expand-button, input.edit-button, input.delete-button, input.invite-button {
-  background-size: 20px;
-  padding-left: 24px; }
+  background-size: 30px; }
 
 input.expand-button {
   background: #f68026 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
+  input.expand-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+    background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
   background: #f68026 url("/static/acressity-static/img/icons/edit-icon.png") no-repeat left; }
+  input.edit-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+    background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.delete-button {
   background: #f68026 url("/static/acressity-static/img/icons/delete-icon.png") no-repeat left;
   background-size: 20px;
   /* For some reason this isn't being inherited from parent class... */ }
+  input.delete-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+    background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.invite-button {
   background: #f68026 url("/static/acressity-static/img/icons/invite-icon.png") no-repeat left; }
+  input.invite-button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
+    background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 form {
   border-radius: 10px;
@@ -182,7 +195,7 @@ textarea {
   background: url("/static/acressity-static/img//notepad_row.png") repeat;
   line-height: 25px;
   padding: 2px 10px;
-  font-family: Ubuntu, Tahoma, sans-serif;
+  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
   font-size: 14px;
   min-height: 2em;
   border: hidden; }
@@ -197,11 +210,21 @@ blockquote .author {
   float: right;
   font-style: italic; }
 
-form.full_width input[type="text"], input[type="password"], textarea {
-  width: 100%;
+.border-demilited p {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */ }
+
+form input[type="text"], input[type="password"], textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
+
+textarea {
+  width: 100%; }
 
 img.full_width {
   width: 100%; }
@@ -242,17 +265,16 @@ img.full_width {
 .object_item_list {
   position: relative; }
 
-.object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
+.object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input {
   position: relative;
   padding: 5px;
-  border-right: 2px solid rgba(74, 123, 158, 0.2);
-  border-left: 2px solid rgba(74, 123, 158, 0.2);
+  border-right: 2px solid rgba(74, 123, 158, 0);
+  border-left: 2px solid rgba(74, 123, 158, 0);
   border-radius: 0.3em;
-  margin: 2px;
-  /*&:hover {
-      border-right: 2px solid rgba(74, 123, 158, 0.6);
-      border-left: 2px solid rgba(74, 123, 158, 0.6);
-  }*/ }
+  margin: 2px; }
+  .object_item:hover, .main_item:hover, #main_index_header:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .timeline:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .request_dash:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover {
+    border-right: 2px solid rgba(74, 123, 158, 0.1);
+    border-left: 2px solid rgba(74, 123, 158, 0.1); }
 
 .thirds_table {
   width: 100%; }
@@ -307,8 +329,7 @@ img.full_width {
 
 .left {
   float: left;
-  width: 45%;
-  background-color: rgba(10, 10, 10, 0.1); }
+  width: 45%; }
 
 .right {
   width: 45%;
@@ -317,7 +338,7 @@ img.full_width {
 .align_center {
   text-align: center; }
 
-.smaller_font {
+.smaller {
   font-size: smaller; }
 
 .x-small_font {
@@ -502,7 +523,6 @@ img.full_width {
 .toggle_div {
   display: none; }
 
-/* div for the navigating of previous/next objects */
 .next_previous {
   overflow: hidden; }
 
@@ -521,8 +541,7 @@ img.full_width {
 .hidden {
   display: none; }
 
-.help_text {
-  display: none;
+.help-text {
   font-size: smaller;
   background-color: rgba(250, 250, 250, 0.15); }
 
@@ -539,6 +558,10 @@ img.full_width {
 
 .half {
   width: 50%; }
+
+.success, .successlist {
+  color: #0B0;
+  font-size: smaller; }
 
 .error, .errorlist {
   color: #B00;
@@ -590,7 +613,7 @@ img.full_width {
 #top_bar_right {
   max-width: 25%;
   position: absolute;
-  right: 150px; }
+  right: 125px; }
 
 #top_bar_signup {
   position: relative;
@@ -627,7 +650,12 @@ img.full_width {
   top: 150px;
   left: 50%;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
   #explore_button:hover {
     background-color: rgba(127, 95, 142, 0.5); }
 
@@ -698,41 +726,24 @@ img.full_width {
   width: 350px;
   height: 100px; }
 
-.formatted_input, .register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
-  padding: 5px;
-  margin: 10px;
+.formatted_input, .register_input {
+  padding: 3px;
+  margin: 3px;
   background-color: rgba(100, 100, 100, 0.2); }
-  .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input, .formatted_input select, .register_input select, #register_first_name select, #register_last_name select, #register_email select, #register_trailname select, #register_password1 select, #register_password2 select {
+  .formatted_input input:not([type=checkbox]):not([type=radio]), .register_input input:not([type=checkbox]):not([type=radio]) {
     min-height: 1em;
-    font-size: 1em; }
-  .formatted_input input, .register_input input, #register_first_name input, #register_last_name input, #register_email input, #register_trailname input, #register_password1 input, #register_password2 input, .formatted_input textarea, .register_input textarea, #register_first_name textarea, #register_last_name textarea, #register_email textarea, #register_trailname textarea, #register_password1 textarea, #register_password2 textarea {
-    background-color: #F4DAFF;
+    font-size: 1em;
+    width: 100%; }
+  .formatted_input input:not([type=submit]):not([type=button]), .register_input input:not([type=submit]):not([type=button]), .formatted_input textarea, .register_input textarea {
+    background-color: #FAFAFA;
     border-radius: 0.3em; }
 
-.register_input, #register_first_name, #register_last_name, #register_email, #register_trailname, #register_password1, #register_password2 {
-  width: 350px;
+.register_input {
   min-height: 70px; }
 
-#register_first_name {
-  float: left; }
-
-#register_last_name {
-  float: left; }
-
-#register_email {
-  float: left; }
-
-#register_trailname {
-  float: left; }
-
-#register_password1 {
-  float: left; }
-
-#register_password2 {
-  float: left; }
-
-#register_submit {
-  clear: both; }
+.register-table {
+  table-layout: fixed;
+  width: 100%; }
 
 #id_honeypot {
   display: none; }
@@ -748,7 +759,7 @@ img.full_width {
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
   .my_nav ul li {
-    font: bold;
+    font-weight: bold;
     display: inline-block;
     margin-right: -12px;
     position: relative;

@@ -274,7 +274,7 @@ img.full_width {
 .align_center {
   text-align: center; }
 
-.smaller_font {
+.smaller {
   font-size: smaller; }
 
 .x-small_font {
