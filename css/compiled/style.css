@@ -242,9 +242,9 @@ img.full_width {
   box-shadow: 0 0 2px 1px #888; }
 
 .no_shadow_border {
-  -moz-box-shadow: 0 0 0px 0px #888;
-  -webkit-box-shadow: 0 0 0px 0px #888;
-  box-shadow: 0 0 0px 0px #888; }
+  -moz-box-shadow: 0 0 0 0 #888;
+  -webkit-box-shadow: 0 0 0 0 #888;
+  box-shadow: 0 0 0 0 #888; }
 
 #content {
   position: relative;
@@ -365,8 +365,8 @@ img.full_width {
 
 .object_item_interaction {
   position: relative;
-  bottom: 0px;
-  left: 0px; }
+  bottom: 0;
+  left: 0; }
 
 .horizontal_list {
   width: 90%;
@@ -399,8 +399,8 @@ img.full_width {
 #photo_form_feedback {
   width: 40%;
   position: absolute;
-  right: 0px;
-  top: 0px; }
+  right: 0;
+  top: 0; }
 
 .uploaded_photo {
   margin: 5px;
@@ -589,22 +589,22 @@ img.full_width {
   text-align: center;
   background-color: rgba(200, 200, 200, 0.7);
   z-index: 3;
-  top: 0px;
-  left: 0px; }
+  top: 0;
+  left: 0; }
 
 #messages_note {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   right: 20px; }
 
 #top_bar {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #f68026;
   z-index: 2;
-  border-radius: 0em; }
+  border-radius: 0; }
 
 #top_bar_left {
   max-width: 75%;
@@ -620,11 +620,13 @@ img.full_width {
   top: 5px; }
 
 #logo {
-  padding: 0px 30px;
+  padding: 0 30px;
   position: relative;
   float: left;
   color: #000;
   top: 8px; }
+  #logo img {
+    vertical-align: middle; }
 
 #logo em {
   font-size: small;
@@ -637,7 +639,7 @@ img.full_width {
   margin: 10px; }
 #main_index_header #text {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 150px;
   height: 100%; }
 
