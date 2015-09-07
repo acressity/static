@@ -119,15 +119,16 @@ $(document).ready(function(){
         }
     });
 
-    
-
-    // $(".option_icon").hover( // This was seeming kinda cool, but leaving it for CSS transitions
-    //     function(){
-    //         $(this).css('width', '200px');
-    //     }, function(){
-    //         $(this).css('width', '28px');
-    //     }
-    // );
+//    $(".option_list").children().hover(function() {
+//        var image = $(this).find("img");
+//        var filePath = image.attr("src");
+//        image.attr("src", filePath.replace("_grayscale", ""));
+//    }, function() {
+//        var image = $(this).find("img");
+//        var filePath = image.attr("src");
+//        var filename = filePath.replace(/^.*[\\\/]/, "");
+//        image.attr("src", filePath.replace(filename, filename.split('.')[0] + "_grayscale." + filename.split('.')[1]));
+//    });
 });
 
 
