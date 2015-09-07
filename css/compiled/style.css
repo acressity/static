@@ -478,32 +478,34 @@ img.full_width {
 .explorer_portrait img {
   width: 200px; }
 
-/* div for options near top of pages (e.g. experience: view photos, upload photo */
+/* div for control options regarding an object (e.g. experience: view photos, upload photo */
 .option_list {
   overflow: hidden;
   background-color: rgba(150, 150, 150, 0.3);
   display: table;
   font-size: small; }
 
-.option {
-  margin: 5px; }
-  .option img {
-    vertical-align: middle;
-    width: 20px;
-    margin: 1px; }
-  .option:hover img {
-    width: 22px;
-    position: relative;
-    margin: 0px; }
+.option img {
+  vertical-align: middle;
+  width: 20px;
+  margin: 1px;
+  opacity: 0.5; }
+.option:hover img {
+  width: 22px;
+  position: relative;
+  margin: 0;
+  opacity: 1; }
 
 .option_icon {
   padding-right: 7px;
   width: 20px;
-  margin: 1px; }
+  margin: 1px;
+  opacity: 0.5; }
   .option_icon:hover {
     width: 22px;
     position: relative;
-    margin: 0px; }
+    opacity: 1;
+    margin: 0; }
 
 .toggler, .wide_toggler {
   cursor: pointer; }
