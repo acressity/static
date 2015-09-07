@@ -93,11 +93,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none; }
 
 input[type="button"], input[type="submit"] {
-  -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
-  box-shadow: inset 0px 1px 0px 0px #fce2c1;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f68026), color-stop(1, #fb9e25));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
   background-color: #f68026;
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topleft: 6px;
@@ -112,7 +107,7 @@ input[type="button"], input[type="submit"] {
   -moz-border-radius-bottomleft: 6px;
   border-bottom-left-radius: 6px;
   text-indent: 0;
-  border: 1px solid #eeb44f;
+  border: none;
   display: inline-block;
   color: #ffffff;
   font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
@@ -122,8 +117,7 @@ input[type="button"], input[type="submit"] {
   line-height: 27px;
   width: 200px;
   text-decoration: none;
-  text-align: center;
-  text-shadow: 1px 1px 0px #cc9f52; }
+  text-align: center; }
   input[type="button"]:hover, input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026));
     background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
