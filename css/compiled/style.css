@@ -24,7 +24,7 @@ div {
   background-color: transparent;
   text-align: left; }
 
-hr, img {
+img {
   border: 0; }
 
 applet, iframe, object {
@@ -53,7 +53,7 @@ html {
   background-size: cover; }
 
 body {
-  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
+  font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
   color: #222;
   font-size: 107.5%; }
 
@@ -88,6 +88,13 @@ textarea {
 select {
   height: 2em; }
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0; }
+
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -113,7 +120,7 @@ input[type="button"], input[type="submit"] {
   border: none;
   display: inline-block;
   color: #ffffff;
-  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
+  font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
   font-size: 16px;
   font-style: normal;
   height: 30px;
@@ -192,7 +199,7 @@ textarea {
   background: url("/static/acressity-static/img//notepad_row.png") repeat;
   line-height: 25px;
   padding: 2px 10px;
-  font-family: "Merriweather Sans", Ubuntu, Helvetica, sans-serif;
+  font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
   font-size: 14px;
   min-height: 2em;
   border: hidden; }

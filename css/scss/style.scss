@@ -14,8 +14,8 @@ html {
     background-size: cover;
 }
 
-$font1: "Merriweather Sans";
-$font2: Ubuntu;
+$font1: Ubuntu;
+$font2: "Merriweather Sans";
 $font3: Helvetica;
 $fontDefault: sans-serif;
 
@@ -61,6 +61,18 @@ textarea {
     border-radius: 5px;
 }
 
+select {
+    height: 2em;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -72,12 +84,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 $button_background: $main_color;
 
 input[type="button"], input[type="submit"] {
-    -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-    box-shadow:inset 0px 1px 0px 0px #fce2c1;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $button_background), color-stop(1, #fb9e25) );
+    //-moz-box-shadow:inset 0 1px 0 0 #fce2c1;
+    //-webkit-box-shadow:inset 0 1px 0 0 #fce2c1;
+    //box-shadow:inset 0 1px 0 0 #fce2c1;
+    //background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $button_background), color-stop(1, #fb9e25) );
     //background:-moz-linear-gradient( center top, $button_background 5%, #fb9e25 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
+    //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
     background-color:$button_background;
     -webkit-border-top-left-radius:6px;
     -moz-border-radius-topleft:6px;
@@ -92,7 +104,7 @@ input[type="button"], input[type="submit"] {
     -moz-border-radius-bottomleft:6px;
     border-bottom-left-radius:6px;
     text-indent:0;
-    border:1px solid #eeb44f;
+    border:none; //1px solid #eeb44f;
     display:inline-block;
     color:#ffffff;
     font-family: $font1, $font2, $font3, $fontDefault;
@@ -101,9 +113,9 @@ input[type="button"], input[type="submit"] {
     height:30px;
     line-height:27px;
     width:200px;
-    text-decoration:none;
+    text-decoration: none;
     text-align:center;
-    text-shadow:1px 1px 0px #cc9f52;
+    //text-shadow:1px 1px 0 #cc9f52;
     &:hover {
         background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, $button_background) );
         background:-moz-linear-gradient( center top, #fb9e25 5%, $button_background 100% );
@@ -121,7 +133,7 @@ input[type="button"], input[type="submit"] {
     height:100px;
     font-size:24px;
     font-weight: bold;
-    color:$link_color;
+    color: $link_color;
 }
 
 .larger {
@@ -250,9 +262,9 @@ img.full_width {
 }
 
 .no_shadow_border {
-    -moz-box-shadow: 0 0 0px 0px #888;
-    -webkit-box-shadow: 0 0 0px 0px #888;
-    box-shadow: 0 0 0px 0px #888;
+    -moz-box-shadow: 0 0 0 0 #888;
+    -webkit-box-shadow: 0 0 0 0 #888;
+    box-shadow: 0 0 0 0 #888;
 }
 
 #content {
@@ -273,9 +285,6 @@ img.full_width {
     width: 25%;
     overflow-y: auto;
     max-height: 90%;
-    div {
-        padding: 5px;
-    }
 }
 
 .object_item_list {
@@ -385,6 +394,9 @@ $item_opacity: 0.3;
 .experience_dash {
     @extend .experience_item;
     position: relative;
+    .option {
+        margin: 5px;
+    }
 }
 
 .request_dash {
@@ -442,8 +454,8 @@ $item_opacity: 0.3;
 
 .object_item_interaction {
     position: relative;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
 }
 
 .horizontal_list {
@@ -489,8 +501,8 @@ $item_opacity: 0.3;
 #photo_form_feedback {
     width: 40%;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
 }
 
 .uploaded_photo {
@@ -599,7 +611,7 @@ $item_opacity: 0.3;
     width: 200px;
 }
 
-/* div for options near top of pages (e.g. experience: view photos, upload photo */
+/* div for control options regarding an object (e.g. experience: view photos, upload photo */
 .option_list {
     @extend .object_item;
     overflow: hidden;
@@ -608,19 +620,21 @@ $item_opacity: 0.3;
     font-size: small;
 }
 
-// Following for vertical option lists
+// Following for vertical option lists with text
 .option {
-    margin: 5px;
+    //margin: 5px;
     img {
         vertical-align: middle;
         width: 20px;
         margin: 1px;
+        opacity: 0.5;
     }
     &:hover {
         img {
             width: 22px;
             position:relative;
-            margin: 0px;
+            margin: 0;
+            opacity: 1;
         }
     }
 }
@@ -630,10 +644,12 @@ $item_opacity: 0.3;
     padding-right: 7px;
     width: 20px;
     margin: 1px;
+    opacity: 0.5;
     &:hover {
         width: 22px;
         position:relative;
-        margin: 0px; // hacky, but I kinda like it and it works wonderfully
+        opacity: 1;
+        margin: 0; // hacky, but I kinda like it and it works wonderfully
     }
 }
 
@@ -663,6 +679,10 @@ $item_opacity: 0.3;
 
 .float_left {
     float: left;
+}
+
+.inline_block {
+    display: inline-block;
 }
 
 .clear_both {
@@ -742,25 +762,25 @@ $item_opacity: 0.3;
     text-align: center;
     background-color: rgba(200, 200, 200, 0.7);
     z-index: 3;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 
 #messages_note {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     right: 20px;
 }
 
 #top_bar {
     @extend .shadow_border;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: $main_color; // previously: rgba(74, 123, 158, 0.9);
     z-index: 2;
-    border-radius: 0em;
+    border-radius: 0;
 }
 
 #top_bar_left {
@@ -780,11 +800,14 @@ $item_opacity: 0.3;
 }
 
 #logo {
-    padding: 0px 30px;
+    padding: 0 30px;
     position: relative;
     float: left;
     color: #000;
     top: 8px;
+    img {
+        vertical-align: middle;
+    }
 }
 
 #logo em {
@@ -803,7 +826,7 @@ $item_opacity: 0.3;
     }
     #text {
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 150px;
         height: 100%;
     }
@@ -812,11 +835,9 @@ $item_opacity: 0.3;
 #explore_button {
     width: 12em;
     height: 12em;
-    background-color: rgba(127, 95, 142, 0.9);
+    background-color: rgba(127, 95, 142, 1);
     border-radius: 50%;
     position: absolute;
-    // margin-left: auto;
-    // margin-right: auto;
     top: 150px;
     left: 50%;
     text-align: center;
@@ -827,7 +848,7 @@ $item_opacity: 0.3;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     &:hover {
-        background-color: rgba(127, 95, 142, 0.5); // rgba(59, 164, 137, 0.55);
+        background-color: rgba(127, 95, 142, 0.5);
     }
 }
 #explore_button p {
@@ -934,16 +955,19 @@ $item_opacity: 0.3;
 .formatted_input {
     @extend .object_item;
     padding: 3px;
-    margin: 3px;
+    margin: 10px 5px;
     background-color: rgba(100, 100, 100, 0.2);
-    input:not([type=checkbox]):not([type=radio]) {
+    input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]) {
         min-height: 1em;
         font-size: 1em;
         width: 100%;
     }
     input:not([type=submit]):not([type=button]), textarea {
-        background-color: #FAFAFA;// #EEE;
+        background-color: #FAFAFA;
         border-radius: 0.3em;
+    }
+    input[type=button], input[type=submit] {
+        width: 50%;
     }
 }
 
@@ -972,7 +996,7 @@ $item_opacity: 0.3;
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     li {
-        font-weight: bold;// sans-serif;
+        font-weight: bold;
         display: inline-block;
         margin-right: -12px;
         position: relative;
