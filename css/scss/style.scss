@@ -38,6 +38,18 @@ $link_color: #1A4B6E;
 
 $main_color: #F68026;
 
+$experience_r: 127;
+$experience_g: 95;
+$experience_b: 142;
+
+$narrative_r: 54;
+$narrative_g: 112;
+$narrative_b: 60;
+
+$explorer_r: 74;
+$explorer_g: 123;
+$explorer_b: 138;
+
 a {
     color: $link_color;
     text-decoration: none;
@@ -339,18 +351,18 @@ $item_opacity: 0.3;
 
 .explorer_item {
     @extend .object_item;
-    background-color: rgba(74, 123, 138, $item_opacity);//rgba(131, 135, 141, $item_opacity);//
+    background-color: rgba($explorer_r, $explorer_g, $explorer_b, $item_opacity);//rgba(131, 135, 141, $item_opacity);//
 }
 
 .experience_item {
     @extend .object_item;
-    background-color: rgba(127, 95, 142, $item_opacity);//rgba(72, 61, 65, $item_opacity);//
+    background-color: rgba($experience_r, $experience_g, $experience_b, $item_opacity);//rgba(72, 61, 65, $item_opacity);//
     // min-height: 100px;
 }
 
 .narrative_item {
     @extend .object_item;
-    background-color: rgba(54, 112, 60, $item_opacity); //rgba(88, 98, 97, $item_opacity);
+    background-color: rgba($narrative_r, $narrative_g, $narrative_b, $item_opacity);
     min-height: 100px;
     word-wrap: break-word;
 }
@@ -376,19 +388,16 @@ $item_opacity: 0.3;
 .explorer_note {
     @extend .explorer_item;
     @extend .note;
-    // border: 2px solid rgba(74, 123, 158, 1);
 }
 
 .experience_note {
     @extend .experience_item;
     @extend .note;
-    // border: 2px solid rgba(167, 95, 142, 1);
 }
 
 .narrative_note {
     @extend .narrative_item;
     @extend .note;
-    // border: 2px solid rgba(54, 152, 60, 1);
 }
 
 .experience_dash {
@@ -418,11 +427,7 @@ $item_opacity: 0.3;
     text-align: center;
 }
 
-.smaller {
-    font-size: smaller;
-}
-
-.x-small_font {
+.x-small {
     font-size: x-small;
 }
 
@@ -707,7 +712,7 @@ $item_opacity: 0.3;
     margin-right: auto;
     text-align: center;
     width: 30%;
-    background-color: rgba(74, 123, 138, $item_opacity);
+    background-color: rgba($explorer_r, $explorer_g, $explorer_b, $item_opacity);
     height: 50px;
     line-height: 50px;
     img {
@@ -778,7 +783,7 @@ $item_opacity: 0.3;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $main_color; // previously: rgba(74, 123, 158, 0.9);
+    background-color: $main_color;
     z-index: 2;
     border-radius: 0;
 }
@@ -832,14 +837,11 @@ $item_opacity: 0.3;
     }
 }
 
-#explore_button {
+.explore_button {
     width: 12em;
     height: 12em;
-    background-color: rgba(127, 95, 142, 1);
     border-radius: 50%;
     position: absolute;
-    top: 150px;
-    left: 50%;
     text-align: center;
     vertical-align: middle;
     -webkit-transition: all 0.2s;
@@ -847,22 +849,49 @@ $item_opacity: 0.3;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-    &:hover {
-        background-color: rgba(127, 95, 142, 0.5);
+    p:first-child {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    p {
+        color: initial;
+        position: relative;
+        top: 30%;
     }
 }
-#explore_button p {
-    position: relative;
-    top: 30%;
-    font-size: 2em;
-    font-weight: bold;
-    color: initial;
+
+#explore_main {
+    @extend .explore_button;
+    background-color: rgba($experience_r, 95, 142, 1);
+    top: 150px;
+    left: 50%;
+    &:hover {
+        background-color: rgba($experience_r, 95, 142, 0.5);
+    }
 }
 
-// #login_out {
-//     position: relative;
-//     right: 20px;
-// }
+$second_two_shift_down: 333px;
+$second_two_shift_outwards: 14%;
+
+#explore_what {
+    @extend .explore_button;
+    background-color: rgba($explorer_r, $explorer_g, $explorer_b, 1);
+    top: $second_two_shift_down;
+    left: 50% - $second_two_shift_outwards;
+    &:hover {
+        background-color: rgba($explorer_r, $explorer_g, $explorer_b, 0.5);
+    }
+}
+
+#explore_why {
+    @extend .explore_button;
+    background-color: rgba($narrative_r, $narrative_g, $narrative_b, 1);
+    top: $second_two_shift_down;
+    left: 50% + $second_two_shift_outwards;
+    &:hover {
+        background-color: rgba($narrative_r, $narrative_g, $narrative_b, 0.5);
+    }
+}
 
 .main_color {
     background-color: $main_color;
@@ -891,7 +920,7 @@ $item_opacity: 0.3;
 #welcome_quote {
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(127, 95, 142, 0.3);
+    background-color: rgba($experience_r, 95, 142, 0.3);
     margin-bottom: 0.5em;
     h2 {
         color: #5986A7;
@@ -1014,7 +1043,7 @@ $item_opacity: 0.3;
 }
 
 .my_nav ul li:hover {
-    background: rgb(74, 123, 138);
+    background: rgb($explorer_r, $explorer_g, $explorer_b);
     color: #fff;
 
 }
@@ -1037,7 +1066,7 @@ $item_opacity: 0.3;
     -o-transition: opacity 0.2s;
     -transition: opacity 0.2s;
     li {
-        background: rgb(74, 123, 138);
+        background: rgb($explorer_r, $explorer_g, $explorer_b);
         display: block;
         color: #fff;
         padding: 10px;

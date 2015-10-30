@@ -342,10 +342,7 @@ img.full_width {
 .align_center {
   text-align: center; }
 
-.smaller {
-  font-size: smaller; }
-
-.x-small_font {
+.x-small {
   font-size: x-small; }
 
 .narrative_dash {
@@ -652,14 +649,11 @@ img.full_width {
   left: 150px;
   height: 100%; }
 
-#explore_button {
+.explore_button, #explore_main, #explore_what, #explore_why {
   width: 12em;
   height: 12em;
-  background-color: #7f5f8e;
   border-radius: 50%;
   position: absolute;
-  top: 150px;
-  left: 50%;
   text-align: center;
   vertical-align: middle;
   -webkit-transition: all 0.2s;
@@ -667,15 +661,34 @@ img.full_width {
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s; }
-  #explore_button:hover {
+  .explore_button p:first-child, #explore_main p:first-child, #explore_what p:first-child, #explore_why p:first-child {
+    font-size: 2em;
+    font-weight: bold; }
+  .explore_button p, #explore_main p, #explore_what p, #explore_why p {
+    color: initial;
+    position: relative;
+    top: 30%; }
+
+#explore_main {
+  background-color: #7f5f8e;
+  top: 150px;
+  left: 50%; }
+  #explore_main:hover {
     background-color: rgba(127, 95, 142, 0.5); }
 
-#explore_button p {
-  position: relative;
-  top: 30%;
-  font-size: 2em;
-  font-weight: bold;
-  color: initial; }
+#explore_what {
+  background-color: #4a7b8a;
+  top: 333px;
+  left: 36%; }
+  #explore_what:hover {
+    background-color: rgba(74, 123, 138, 0.5); }
+
+#explore_why {
+  background-color: #36703c;
+  top: 333px;
+  left: 64%; }
+  #explore_why:hover {
+    background-color: rgba(54, 112, 60, 0.5); }
 
 .main_color {
   background-color: #f68026; }
