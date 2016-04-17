@@ -12,6 +12,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: red;
 }
 
 $font1: Ubuntu;
@@ -95,7 +96,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 $button_background: $main_color;
 
-input[type="button"], input[type="submit"] {
+input[type="button"], input[type="submit"], button {
     //-moz-box-shadow:inset 0 1px 0 0 #fce2c1;
     //-webkit-box-shadow:inset 0 1px 0 0 #fce2c1;
     //box-shadow:inset 0 1px 0 0 #fce2c1;
@@ -254,7 +255,7 @@ textarea {
     width: 100%;
 }
 
-img.full_width {
+.full_width {
     width: 100%;
 }
 

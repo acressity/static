@@ -50,7 +50,8 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  color: red; }
 
 body {
   font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
@@ -68,7 +69,7 @@ p {
   margin: 15px 5px; }
 
 a {
-  color: #1a4b6e;
+  color: #1A4B6E;
   text-decoration: none;
   outline: 0; }
   a:hover {
@@ -102,8 +103,8 @@ input[type="submit"]::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none; }
 
-input[type="button"], input[type="submit"] {
-  background-color: #f68026;
+input[type="button"], input[type="submit"], button {
+  background-color: #F68026;
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topleft: 6px;
   border-top-left-radius: 6px;
@@ -128,12 +129,12 @@ input[type="button"], input[type="submit"] {
   width: 200px;
   text-decoration: none;
   text-align: center; }
-  input[type="button"]:hover, input[type="submit"]:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026));
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+  input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026));
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25; }
-  input[type="button"]:active, input[type="submit"]:active {
+  input[type="button"]:active, input[type="submit"]:active, button:active {
     position: relative;
     top: 1px; }
 
@@ -142,7 +143,7 @@ input[type="button"], input[type="submit"] {
   height: 100px;
   font-size: 24px;
   font-weight: bold;
-  color: #1a4b6e; }
+  color: #1A4B6E; }
 
 .larger {
   font-size: larger; }
@@ -151,36 +152,36 @@ input[type="button"], input[type="submit"] {
   background-size: 30px; }
 
 input.expand-button {
-  background: #f68026 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
+  background: #F68026 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
   input.expand-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
-  background: #f68026 url("/static/acressity-static/img/icons/edit-icon.png") no-repeat left; }
+  background: #F68026 url("/static/acressity-static/img/icons/edit-icon.png") no-repeat left; }
   input.edit-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.delete-button {
-  background: #f68026 url("/static/acressity-static/img/icons/delete-icon.png") no-repeat left;
+  background: #F68026 url("/static/acressity-static/img/icons/delete-icon.png") no-repeat left;
   background-size: 20px;
   /* For some reason this isn't being inherited from parent class... */ }
   input.delete-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.invite-button {
-  background: #f68026 url("/static/acressity-static/img/icons/invite-icon.png") no-repeat left; }
+  background: #F68026 url("/static/acressity-static/img/icons/invite-icon.png") no-repeat left; }
   input.invite-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #f68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #f68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
@@ -230,7 +231,7 @@ form input[type="text"], input[type="password"], textarea {
 textarea {
   width: 100%; }
 
-img.full_width {
+.full_width {
   width: 100%; }
 
 #main {
@@ -299,7 +300,7 @@ img.full_width {
   height: 100%; }
 
 .main_item, #main_index_header {
-  background-color: #f68026; }
+  background-color: #F68026; }
 
 .explorer_item, .explorer_note {
   background-color: rgba(74, 123, 138, 0.3); }
@@ -385,7 +386,7 @@ img.full_width {
   .horizontal_list a {
     color: #FFF; }
     .horizontal_list a:hover {
-      color: #1a4b6e; }
+      color: #1A4B6E; }
 
 .comment_list {
   font-size: smaller;
@@ -608,7 +609,7 @@ img.full_width {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f68026;
+  background-color: #F68026;
   z-index: 2;
   border-radius: 0; }
 
@@ -691,7 +692,7 @@ img.full_width {
     background-color: rgba(54, 112, 60, 0.5); }
 
 .main_color {
-  background-color: #f68026; }
+  background-color: #F68026; }
 
 #id_comment {
   width: 100%;
@@ -837,3 +838,5 @@ img.full_width {
   display: block;
   opacity: 1;
   visibility: visible; }
+
+/*# sourceMappingURL=style.css.map */
