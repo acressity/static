@@ -50,8 +50,7 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  color: red; }
+  background-size: cover; }
 
 body {
   font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
@@ -268,26 +267,29 @@ textarea {
 .object_item_list {
   position: relative; }
 
-.object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .request_dash, .gallery_photo_item, .option_list, .formatted_input, .register_input {
+.object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .photo_item, .request_dash, .gallery_photo_item, .formatted_input, .register_input {
   position: relative;
   padding: 5px;
   border-right: 2px solid rgba(74, 123, 158, 0);
   border-left: 2px solid rgba(74, 123, 158, 0);
   border-radius: 0.3em;
   margin: 2px; }
-  .object_item:hover, .main_item:hover, #main_index_header:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .timeline:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .request_dash:hover, .gallery_photo_item:hover, .option_list:hover, .formatted_input:hover, .register_input:hover {
+  .object_item:hover, .main_item:hover, #main_index_header:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .timeline:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .photo_item:hover, .request_dash:hover, .gallery_photo_item:hover, .formatted_input:hover, .register_input:hover {
     border-right: 2px solid rgba(74, 123, 158, 0.1);
     border-left: 2px solid rgba(74, 123, 158, 0.1); }
 
 .thirds_table {
+  position: relative;
   width: 100%; }
+
+.thirds_table .cell {
+  width: 33%;
+  height: 100%;
+  display: inline-block; }
 
 .thirds_table td {
   vertical-align: top;
   width: 33%; }
-
-.thirds_table td > div {
-  min-height: 300px; }
 
 .timeline {
   overflow-x: auto;
@@ -309,9 +311,11 @@ textarea {
   background-color: rgba(127, 95, 142, 0.3); }
 
 .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative {
-  background-color: rgba(54, 112, 60, 0.3);
-  min-height: 100px;
+  background-color: rgba(54, 112, 60, 0.4);
   word-wrap: break-word; }
+
+.photo_item {
+  background-color: rgba(120, 120, 120, 0.3); }
 
 .editable:hover {
   background: url("/static/acressity-static/img/icons/edit-icon.png") no-repeat top right; }
@@ -349,17 +353,14 @@ textarea {
 .align_center {
   text-align: center; }
 
+.valign_middle {
+  vertical-align: middle; }
+
 .x-small {
   font-size: x-small; }
 
-.narrative_dash {
-  min-height: 100px; }
-
-.narrative_taste {
-  display: none; }
-
 .narrative_detail {
-  min-height: 325px; }
+  min-height: 250px; }
 
 .narrative_detail .images_right {
   float: right;
@@ -400,20 +401,6 @@ textarea {
 
 .youtube {
   padding: 5px; }
-
-#photo_form {
-  width: 50%; }
-
-#photo_form_feedback {
-  width: 40%;
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-.uploaded_photo {
-  margin: 5px;
-  float: left;
-  width: 100px; }
 
 .gallery_photo_item {
   min-height: 290px;
@@ -495,7 +482,6 @@ textarea {
 /* div for control options regarding an object (e.g. experience: view photos, upload photo */
 .option_list {
   overflow: hidden;
-  background-color: rgba(150, 150, 150, 0.3);
   display: table;
   font-size: small; }
 
@@ -556,6 +542,7 @@ textarea {
 
 .help-text {
   font-size: smaller;
+  padding: 5px;
   background-color: rgba(250, 250, 250, 0.15); }
 
 .pagination {
