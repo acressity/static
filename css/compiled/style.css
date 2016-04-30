@@ -329,6 +329,12 @@ textarea {
   .experience_dash .option {
     margin: 5px; }
 
+.fulfilled-award {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
 .request_dash {
   background-color: rgba(50, 80, 150, 0.5); }
 
