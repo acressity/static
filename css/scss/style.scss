@@ -417,6 +417,13 @@ $item_opacity: 0.3;
     }
 }
 
+.fulfilled-award {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 .request_dash {
     @extend .object_item;
     background-color: rgba(50, 80, 150, 0.5);
