@@ -371,6 +371,11 @@ $item_opacity: 0.3;
     word-wrap: break-word;
 }
 
+.photo_item {
+    @extend .object_item;
+    background-color: rgba(120, 120, 120, $item_opacity);
+}
+
 .editable {
     &:hover {
         background: url($img_dir + "icons/edit-icon.png") no-repeat top right;
