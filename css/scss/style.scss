@@ -367,8 +367,7 @@ $item_opacity: 0.3;
 
 .narrative_item {
     @extend .object_item;
-    background-color: rgba($narrative_r, $narrative_g, $narrative_b, $item_opacity);
-    min-height: 100px;
+    background-color: rgba($narrative_r, $narrative_g, $narrative_b, $item_opacity + 0.1);
     word-wrap: break-word;
 }
 
