@@ -318,7 +318,14 @@ textarea {
 }
 
 .thirds_table {
+    position: relative;
     width: 100%;
+}
+
+.thirds_table .cell {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
 }
 
 .thirds_table td {
@@ -327,7 +334,7 @@ textarea {
 }
 
 .thirds_table td > div {
-    min-height: 300px;
+    // min-height: 300px;
 }
 
 .timeline {
