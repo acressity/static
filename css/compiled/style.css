@@ -603,7 +603,7 @@ textarea {
   left: 0;
   width: 100%;
   background-color: #F68026;
-  z-index: 2;
+  z-index: 3;
   border-radius: 0; }
 
 #top_bar_left {
