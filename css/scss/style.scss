@@ -304,14 +304,8 @@ textarea {
 .object_item {
     position: relative;
     padding: 5px;
-    border-right: 2px solid rgba(74, 123, 158, 0.0);
-    border-left: 2px solid rgba(74, 123, 158, 0.0);
     border-radius: 0.3em;
     margin: 2px;
-    &:hover {
-        border-right: 2px solid rgba(74, 123, 158, 0.1);
-        border-left: 2px solid rgba(74, 123, 158, 0.1);
-    }
 }
 
 .thirds_table {

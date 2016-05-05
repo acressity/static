@@ -270,13 +270,8 @@ textarea {
 .object_item, .main_item, #main_index_header, .explorer_item, .explorer_note, .experience_item, .experience_note, .experience_dash, .narrative_item, .timeline, .narrative_note, .narrative_dash, .narrative_detail, .latest_narrative, .photo_item, .request_dash, .gallery_photo_item, .formatted_input, .register_input {
   position: relative;
   padding: 5px;
-  border-right: 2px solid rgba(74, 123, 158, 0);
-  border-left: 2px solid rgba(74, 123, 158, 0);
   border-radius: 0.3em;
   margin: 2px; }
-  .object_item:hover, .main_item:hover, #main_index_header:hover, .explorer_item:hover, .explorer_note:hover, .experience_item:hover, .experience_note:hover, .experience_dash:hover, .narrative_item:hover, .timeline:hover, .narrative_note:hover, .narrative_dash:hover, .narrative_detail:hover, .latest_narrative:hover, .photo_item:hover, .request_dash:hover, .gallery_photo_item:hover, .formatted_input:hover, .register_input:hover {
-    border-right: 2px solid rgba(74, 123, 158, 0.1);
-    border-left: 2px solid rgba(74, 123, 158, 0.1); }
 
 .thirds_table {
   position: relative;
