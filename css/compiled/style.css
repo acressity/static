@@ -103,7 +103,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none; }
 
 input[type="button"], input[type="submit"], button {
-  background-color: #F68026;
+  background-color: #4A7B8A;
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topleft: 6px;
   border-top-left-radius: 6px;
@@ -129,8 +129,8 @@ input[type="button"], input[type="submit"], button {
   text-decoration: none;
   text-align: center; }
   input[type="button"]:hover, input[type="submit"]:hover, button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026));
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A));
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25; }
   input[type="button"]:active, input[type="submit"]:active, button:active {
@@ -151,43 +151,42 @@ input[type="button"], input[type="submit"], button {
   background-size: 30px; }
 
 input.expand-button {
-  background: #F68026 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
+  background: #4A7B8A url("/static/acressity-static/img/favicon.ico") no-repeat left; }
   input.expand-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.edit-button {
-  background: #F68026 url("/static/acressity-static/img/icons/edit-icon.png") no-repeat left; }
+  background: #4A7B8A url("/static/acressity-static/img/icons/edit-icon.png") no-repeat left; }
   input.edit-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.delete-button {
-  background: #F68026 url("/static/acressity-static/img/icons/delete-icon.png") no-repeat left;
+  background: #4A7B8A url("/static/acressity-static/img/icons/delete-icon.png") no-repeat left;
   background-size: 20px;
   /* For some reason this isn't being inherited from parent class... */ }
   input.delete-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 input.invite-button {
-  background: #F68026 url("/static/acressity-static/img/icons/invite-icon.png") no-repeat left; }
+  background: #4A7B8A url("/static/acressity-static/img/icons/invite-icon.png") no-repeat left; }
   input.invite-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #F68026)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #F68026 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A)) url("/static/acressity-static/img/favicon.ico") no-repeat left;
+    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
     background-color: #fb9e25 url("/static/acressity-static/img/favicon.ico") no-repeat left; }
 
 form {
   border-radius: 10px;
-  border: 2px rgba(100, 100, 100, 0.1) solid;
-  background-color: rgba(230, 230, 255, 0.5);
+  background-color: rgba(230, 230, 255, 0.2);
   padding: 3px; }
   form.no_styling {
     border-radius: 0;
@@ -297,7 +296,7 @@ textarea {
   height: 100%; }
 
 .main_item, #main_index_header {
-  background-color: #F68026; }
+  background-color: #4A7B8A; }
 
 .explorer_item, .explorer_note {
   background-color: rgba(74, 123, 138, 0.3); }
@@ -583,7 +582,7 @@ textarea {
   width: 100%;
   text-align: center;
   background-color: rgba(200, 200, 200, 0.7);
-  z-index: 3;
+  z-index: 4;
   top: 0;
   left: 0; }
 
@@ -597,7 +596,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #F68026;
+  background-color: #4A7B8A;
   z-index: 3;
   border-radius: 0; }
 
@@ -680,7 +679,7 @@ textarea {
     background-color: rgba(54, 112, 60, 0.5); }
 
 .main_color {
-  background-color: #F68026; }
+  background-color: #4A7B8A; }
 
 #id_comment {
   width: 100%;
@@ -740,7 +739,7 @@ textarea {
   height: 100px; }
 
 .formatted_input, .register_input {
-  padding: 3px;
+  padding: 5px;
   margin: 10px 5px;
   background-color: rgba(100, 100, 100, 0.2); }
   .formatted_input input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]), .register_input input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]) {
