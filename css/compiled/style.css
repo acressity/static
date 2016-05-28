@@ -129,10 +129,10 @@ input[type="button"], input[type="submit"], button {
   text-decoration: none;
   text-align: center; }
   input[type="button"]:hover, input[type="submit"]:hover, button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #4A7B8A));
-    background: -moz-linear-gradient(center top, #fb9e25 5%, #4A7B8A 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='$button_background');
-    background-color: #fb9e25; }
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1A4B6E), color-stop(1, #4A7B8A));
+    background: -moz-linear-gradient(center top, #1A4B6E 5%, #4A7B8A 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$main_color_darker', endColorstr='$button_background');
+    background-color: #1A4B6E; }
   input[type="button"]:active, input[type="submit"]:active, button:active {
     position: relative;
     top: 1px; }
@@ -607,7 +607,7 @@ textarea {
 #top_bar_right {
   max-width: 25%;
   position: absolute;
-  right: 125px; }
+  right: 200px; }
 
 #top_bar_signup {
   position: relative;
@@ -741,7 +741,7 @@ textarea {
 .formatted_input, .register_input {
   padding: 5px;
   margin: 10px 5px;
-  background-color: rgba(100, 100, 100, 0.2); }
+  background-color: rgba(100, 100, 100, 0.1); }
   .formatted_input input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]), .register_input input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]) {
     min-height: 1em;
     font-size: 1em;
