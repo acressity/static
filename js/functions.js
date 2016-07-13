@@ -25,7 +25,7 @@ function verify(message, element){
     }
 }
 
-// To be completely honest, I really have no idea what the following is doing. I'll work on it someday.
+// To be completely honest, I really have no idea what the following is doing. Maybe I'll work on it someday.
 function setup_ajax(){
     function getCookie(name) {
         var cookieValue = null;
@@ -111,13 +111,6 @@ $(document).ready(function(){
 	    fade($("#messages"));
 	});
 
-    $(".wide_toggler").click(function(){
-        if ($(this).hasClass("flipped")){
-            $(this).removeClass("flipped");
-        } else {
-            $(this).addClass("flipped");
-        }
-    });
 
 //    $(".option_list").children().hover(function() {
 //        var image = $(this).find("img");
@@ -134,7 +127,7 @@ $(document).ready(function(){
 
 // Validates the form for signing up
 function validateFirstExperience(form){
-    experience = form.experience;
+    experience = form.title;
     if (experience.value == experience.defaultValue || experience.value.length < 1){ // They don't want to start with an experience. Perfectly fine
         //alert("Begin by submitting a new experience in the box");
         // experience.value = ""; // For the catching script
