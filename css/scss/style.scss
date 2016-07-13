@@ -244,6 +244,10 @@ blockquote .author {
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
+input {
+	padding: 5px;
+}
+
 form input[type="text"], input[type="password"], textarea  {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
