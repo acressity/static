@@ -72,7 +72,7 @@ a {
   text-decoration: none;
   outline: 0; }
   a:hover {
-    color: #595; }
+    color: #1A7B9E; }
 
 ul {
   list-style: none; }
@@ -123,7 +123,6 @@ input[type="button"], input[type="submit"], button {
   font-family: Ubuntu, "Merriweather Sans", Helvetica, sans-serif;
   font-size: 16px;
   font-style: normal;
-  height: 30px;
   line-height: 27px;
   width: 200px;
   text-decoration: none;
@@ -221,6 +220,9 @@ blockquote .author {
   background-clip: padding-box;
   /* for IE9+, Firefox 4+, Opera, Chrome */ }
 
+input {
+  padding: 5px; }
+
 form input[type="text"], input[type="password"], textarea {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -278,6 +280,11 @@ textarea {
 
 .thirds_table .cell {
   width: 33%;
+  height: 100%;
+  display: inline-block; }
+
+.halves_table .cell {
+  width: 48%;
   height: 100%;
   display: inline-block; }
 
@@ -794,7 +801,7 @@ textarea {
 .my_nav ul li ul {
   padding: 0;
   position: absolute;
-  top: 31px;
+  top: 28px;
   left: 0;
   width: 150px;
   -webkit-box-shadow: none;
