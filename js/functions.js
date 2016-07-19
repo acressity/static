@@ -108,7 +108,7 @@ $(document).ready(function(){
 	// jQuery functions to be made available upon page load
 
 	$("#messages").click(function() {
-	    fade($("#messages"));
+	    $("#messages").remove();
 	});
 
 
