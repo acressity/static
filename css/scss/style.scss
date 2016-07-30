@@ -97,12 +97,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 $button_background: $main_color;
 
 input[type="button"], input[type="submit"], button {
-    //-moz-box-shadow:inset 0 1px 0 0 #fce2c1;
-    //-webkit-box-shadow:inset 0 1px 0 0 #fce2c1;
-    //box-shadow:inset 0 1px 0 0 #fce2c1;
-    //background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, $button_background), color-stop(1, #fb9e25) );
-    //background:-moz-linear-gradient( center top, $button_background 5%, #fb9e25 100% );
-    //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background', endColorstr='#fb9e25');
     background-color:$button_background;
     -webkit-border-top-left-radius:6px;
     -moz-border-radius-topleft:6px;
@@ -117,7 +111,7 @@ input[type="button"], input[type="submit"], button {
     -moz-border-radius-bottomleft:6px;
     border-bottom-left-radius:6px;
     text-indent:0;
-    border:none; //1px solid #eeb44f;
+    border:none;
     display:inline-block;
     color:#ffffff;
     font-family: $font1, $font2, $font3, $fontDefault;
@@ -127,7 +121,6 @@ input[type="button"], input[type="submit"], button {
     width:200px;
     text-decoration: none;
     text-align:center;
-    //text-shadow:1px 1px 0 #cc9f52;
     &:hover {
         background:-webkit-gradient( linear, left top, left bottom,
         color-stop(0.05, $main_color_darker), color-stop(1, $button_background) );
@@ -155,7 +148,6 @@ input[type="button"], input[type="submit"], button {
 
 .icon_button {
     background-size: 30px;
-    // height: 24px;
 }
 
 input.expand-button {
@@ -336,10 +328,6 @@ textarea {
     width: 33%;
 }
 
-.thirds_table td > div {
-    // min-height: 300px;
-}
-
 .timeline {
     @extend .narrative_item;
     overflow-x: auto;
@@ -394,7 +382,6 @@ $item_opacity: 0.3;
 
 .note {
     @extend .post_it;
-    // padding: 30px 10px 10px;
     min-height: 100px;
     margin-bottom: 10px;
 }
@@ -495,7 +482,6 @@ $item_opacity: 0.3;
         display: block;
         width: 10%;
         float: left;
-        //margin: 10px;
         padding:5px;
     }
     a {
@@ -634,7 +620,6 @@ $item_opacity: 0.3;
 
 // Following for vertical option lists with text
 .option {
-    //margin: 5px;
     img {
         vertical-align: middle;
         width: 20px;
@@ -835,7 +820,6 @@ $item_opacity: 0.3;
         width: 65px;
         border-radius:0.4em;
         margin:10px;
-        // float: left;
     }
     #text {
         position: absolute;
@@ -926,19 +910,11 @@ $second_two_shift_outwards: 14%;
 }
 
 #welcome_quote {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba($experience_r, 95, 142, 0.3);
-    margin-bottom: 0.5em;
-    h2 {
-        color: #5986A7;
+	@extend .explorer_item;
+	padding: 10px;
+    h2, h3 {
+        text-align: center;
     }
-}
-
-#featured_experience {
-    // font-size: 18px;
-    // background-color: rgba(167, 95, 142, 0.55);
-    // padding: 3px;
 }
 
 .latest_narrative {
@@ -969,9 +945,7 @@ $second_two_shift_outwards: 14%;
 
 .notifications {
     .notice {
-        //@extend .object_item;
         @extend .note;
-        //border: 2px solid $main_color;
     }
 }
 
@@ -980,7 +954,6 @@ $second_two_shift_outwards: 14%;
 }
 
 #id_caption {
-    //width: 350px;
     height: 100px;
 }
 
