@@ -216,6 +216,10 @@ textarea {
     border: hidden;
 }
 
+blockquote {
+	font-size: 0.9em;
+}
+
 blockquote:after {
     content: " ";
     display: block;
@@ -223,9 +227,12 @@ blockquote:after {
     clear: both;
 }
 
+blockquote .body {
+	font-style: italic;
+}
+
 blockquote .author {
-    float: right;
-    font-style: italic;
+	text-align: center;
 }
 
 .border-demilited p {
