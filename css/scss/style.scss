@@ -65,9 +65,9 @@ ul {
 }
 
 div {
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 textarea {
@@ -196,7 +196,6 @@ input.invite-button {
 }
 
 form {
-    border-radius: 10px;
     background-color: rgba(230, 230, 255, 0.2);
     padding: 3px;
     &.no_styling {
@@ -302,7 +301,6 @@ textarea {
 .object_item {
     position: relative;
     padding: 5px;
-    border-radius: 0.3em;
     margin: 2px;
 }
 
