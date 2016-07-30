@@ -39,17 +39,17 @@ $gold_color: #dbbf0d;
 $main_color: #4A7B8A;
 $main_color_darker: #1A4B6E;
 
-$experience_r: 127;
-$experience_g: 95;
-$experience_b: 142;
+$exper_r: 127;
+$exper_g: 95;
+$exper_b: 142;
 
-$narrative_r: 54;
-$narrative_g: 112;
-$narrative_b: 60;
+$narr_r: 54;
+$narr_g: 112;
+$narr_b: 60;
 
-$explorer_r: 74;
-$explorer_g: 123;
-$explorer_b: 138;
+$expl_r: 74;
+$expl_g: 123;
+$expl_b: 138;
 
 a {
     color: $link_color;
@@ -362,18 +362,17 @@ $item_opacity: 0.3;
 
 .explorer_item {
     @extend .object_item;
-    background-color: rgba($explorer_r, $explorer_g, $explorer_b, $item_opacity);//rgba(131, 135, 141, $item_opacity);//
+    background-color: rgba($expl_r, $expl_g, $expl_b, $item_opacity);
 }
 
 .experience_item {
     @extend .object_item;
-    background-color: rgba($experience_r, $experience_g, $experience_b, $item_opacity);//rgba(72, 61, 65, $item_opacity);//
-    // min-height: 100px;
+    background-color: rgba($exper_r, $exper_g, $exper_b, $item_opacity);
 }
 
 .narrative_item {
     @extend .object_item;
-    background-color: rgba($narrative_r, $narrative_g, $narrative_b, $item_opacity + 0.1);
+    background-color: rgba($narr_r, $narr_g, $narr_b, $item_opacity + 0.1);
     word-wrap: break-word;
 }
 
@@ -721,7 +720,7 @@ $item_opacity: 0.3;
     margin-right: auto;
     text-align: center;
     width: 30%;
-    background-color: rgba($explorer_r, $explorer_g, $explorer_b, $item_opacity);
+    background-color: rgba($expl_r, $expl_g, $expl_b, $item_opacity);
     height: 50px;
     line-height: 50px;
     img {
@@ -871,11 +870,11 @@ $item_opacity: 0.3;
 
 #explore_main {
     @extend .explore_button;
-    background-color: rgba($experience_r, 95, 142, 1);
+    background-color: rgba($exper_r, 95, 142, 1);
     top: 150px;
     left: 50%;
     &:hover {
-        background-color: rgba($experience_r, 95, 142, 0.5);
+        background-color: rgba($exper_r, 95, 142, 0.5);
     }
 }
 
@@ -884,21 +883,21 @@ $second_two_shift_outwards: 14%;
 
 #explore_what {
     @extend .explore_button;
-    background-color: rgba($explorer_r, $explorer_g, $explorer_b, 1);
+    background-color: rgba($expl_r, $expl_g, $expl_b, 1);
     top: $second_two_shift_down;
     left: 50% - $second_two_shift_outwards;
     &:hover {
-        background-color: rgba($explorer_r, $explorer_g, $explorer_b, 0.5);
+        background-color: rgba($expl_r, $expl_g, $expl_b, 0.5);
     }
 }
 
 #explore_why {
     @extend .explore_button;
-    background-color: rgba($narrative_r, $narrative_g, $narrative_b, 1);
+    background-color: rgba($narr_r, $narr_g, $narr_b, 1);
     top: $second_two_shift_down;
     left: 50% + $second_two_shift_outwards;
     &:hover {
-        background-color: rgba($narrative_r, $narrative_g, $narrative_b, 0.5);
+        background-color: rgba($narr_r, $narr_g, $narr_b, 0.5);
     }
 }
 
@@ -1052,7 +1051,7 @@ $second_two_shift_outwards: 14%;
 }
 
 .my_nav ul li:hover {
-    background: rgb($explorer_r, $explorer_g, $explorer_b);
+    background: rgb($expl_r, $expl_g, $expl_b);
     color: #fff;
 
 }
@@ -1075,7 +1074,7 @@ $second_two_shift_outwards: 14%;
     -o-transition: opacity 0.2s;
     -transition: opacity 0.2s;
     li {
-        background: rgb($explorer_r, $explorer_g, $explorer_b);
+        background: rgb($expl_r, $expl_g, $expl_b);
         display: block;
         color: #fff;
         padding: 10px;
