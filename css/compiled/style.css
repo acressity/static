@@ -135,6 +135,13 @@ input[type="button"], input[type="submit"], button {
   input[type="button"]:active, input[type="submit"]:active, button:active {
     position: relative;
     top: 1px; }
+  input[type="button"].danger, input[type="submit"].danger, button.danger {
+    background-color: #F22; }
+    input[type="button"].danger:hover, input[type="submit"].danger:hover, button.danger:hover {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #F00), color-stop(1, #F22));
+      background: -moz-linear-gradient(center top, #F00 5%, #F22 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background_danger_darker', endColorstr='$button_background_danger');
+      background-color: #F00; }
 
 #large_button {
   width: 100%;
