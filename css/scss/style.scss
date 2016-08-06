@@ -95,6 +95,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 $button_background: $main_color;
+$button_background_danger: #F22;
+$button_background_danger_darker: #F00;
 
 input[type="button"], input[type="submit"], button {
     background-color:$button_background;
@@ -132,6 +134,16 @@ input[type="button"], input[type="submit"], button {
         position:relative;
         top:1px;
     }
+	&.danger {
+		background-color: $button_background_danger;
+		&:hover {
+			background:-webkit-gradient( linear, left top, left bottom,
+			color-stop(0.05, $button_background_danger_darker), color-stop(1, $button_background_danger) );
+			background:-moz-linear-gradient( center top, $button_background_danger_darker 5%, $button_background_danger 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$button_background_danger_darker', endColorstr='$button_background_danger');
+			background-color:$button_background_danger_darker;
+		}
+	}
 }
 
 #large_button {
